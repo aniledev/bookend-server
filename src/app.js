@@ -18,13 +18,21 @@ const morganOption = NODE_ENV === "production" ? "tiny" : "dev";
 //STANDARD MIDDLEWARE
 app.use(morgan(morganOption));
 app.use(helmet());
-app.use(cors);
+app.use(
+  cors({
+    origin: CLIENT_ORIGIN,
+  })
+);
 app.use(express.json());
 
 //ROUTES
 
 // TEST API
-app.get("/api", (req, res, next) => {
+app.get("/api/book", (req, res) => {
+  res.json({ ok: false });
+});
+
+app.get("/api", (req, res) => {
   res.json({ ok: true });
 });
 
