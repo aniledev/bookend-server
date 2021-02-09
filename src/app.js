@@ -5,7 +5,7 @@ const morgan = require("morgan");
 const helmet = require("helmet");
 const cors = require("cors");
 const winston = require("winston");
-const { NODE_ENV, PORT } = require("./config");
+const { NODE_ENV, PORT, CLIENT_ORIGIN } = require("./config");
 const errorHandler = require("./errorHandler");
 const router = require("./router");
 const logger = require("./logger");
@@ -17,7 +17,11 @@ const morganOption = NODE_ENV === "production" ? "tiny" : "dev";
 //STANDARD MIDDLEWARE
 app.use(morgan(morganOption));
 app.use(helmet());
-app.use(cors());
+app.use(
+  cors({
+    origin: CLIENT_ORIGIN,
+  })
+);
 app.use(express.json());
 
 //ROUTES
