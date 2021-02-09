@@ -28,8 +28,10 @@ app.use(express.json());
 //ROUTES
 
 // TEST API
+
 app.get("/api/book", (req, res) => {
-  res.json({ ok: false });
+  // use validation to send back a filtered list based on req.body
+  res.send("This endpoint returns all books from server.");
 });
 
 app.get("/api", (req, res) => {
