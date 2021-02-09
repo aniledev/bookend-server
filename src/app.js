@@ -29,7 +29,7 @@ app.use(express.json());
 
 // TEST API
 
-app.get("/api/book", (req, res) => {
+app.get("/api/result", (req, res) => {
   // use validation to send back a filtered list based on req.body
   res.send("This endpoint returns all books from server.");
 });
