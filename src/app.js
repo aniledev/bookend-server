@@ -9,6 +9,7 @@ const { NODE_ENV, PORT, CLIENT_ORIGIN } = require("./config");
 const errorHandler = require("./errorHandler");
 const router = require("./router");
 const logger = require("./logger");
+const data = require("./dummyData");
 
 const app = express();
 
