@@ -9,7 +9,7 @@ const { NODE_ENV, PORT, CLIENT_ORIGIN } = require("./config");
 const errorHandler = require("./errorHandler");
 const router = require("./router");
 const logger = require("./logger");
-const data = require("./dummyData");
+const DATA = require("./dummyData");
 
 const app = express();
 
@@ -18,18 +18,17 @@ const morganOption = NODE_ENV === "production" ? "tiny" : "dev";
 //STANDARD MIDDLEWARE
 app.use(morgan(morganOption));
 app.use(helmet());
-app.use(
-  cors({
-    origin: CLIENT_ORIGIN,
-  })
-);
+app.use(cors);
 app.use(express.json());
 
 //ROUTES
-app.get("/api", (req, res) => {
+
+// TEST API
+app.get("/api", (req, res, next) => {
   res.json({ ok: true });
 });
 
+// TEST EXPRESS WIRING
 app.get("/", (req, res) => {
   res.send("Hello, world!");
 });
