@@ -10,6 +10,7 @@ const errorHandler = require("./errorHandler");
 const router = require("./router");
 const logger = require("./logger");
 const DATA = require("./dummyStore");
+const USERS = require("./userStore");
 
 const app = express();
 
@@ -63,9 +64,7 @@ app.delete("/api/users/:userId/books/:bookId", (req, res) => {
 
 // get all user information from the server for each user
 app.get("/api/users", (req, res) => {
-  res.send(
-    "This endpoint returns the user info from server for every single user."
-  );
+  res.json(USERS);
 });
 
 // post a single user to the list of users on the server

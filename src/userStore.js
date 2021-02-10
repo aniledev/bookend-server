@@ -1,4 +1,4 @@
-[
+const USERS = [
   {
     id: 1,
     name: "Elina",
@@ -54,3 +54,5 @@
     password: "",
   },
 ];
+
+module.exports = USERS;
