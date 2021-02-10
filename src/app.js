@@ -29,13 +29,13 @@ app.use(express.json());
 
 // TEST API
 
-// get book list
+// get dummy data book list from the server
 app.get("/api/results", (req, res) => {
   // use validation to send back a filtered list based on req.body
   res.send("This endpoint returns all books from server.");
 });
 
-// get on individual book result from the server
+// get one individual book result from the server
 app.get("/api/results/:resultId", (req, res) => {
   res.send("This endpoint returns one individual book from server.");
 });
@@ -48,7 +48,7 @@ app.get("/api/users/:userId/books", (req, res) => {
 });
 
 // posts a new book to the users personalized/saved list
-app.post("api/users/:userId/books", (req, res) => {
+app.post("/api/users/:userId/books", (req, res) => {
   res.send(
     "This endpoint posts a new book to the user's personalized list on the server."
   );
