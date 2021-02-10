@@ -64,7 +64,19 @@ app.delete("/api/users/:userId/books/:bookId", (req, res) => {
 
 // get all user information from the server for each user
 app.get("/api/users", (req, res) => {
-  res.json(USERS);
+  // declare a response variable of all users because this is the data we need to access and check
+  let response = USERS;
+
+  // access the request body using object destructuring
+  const { email } = req.body;
+
+  if (!email) {
+    res.json(response);
+  } else {
+    response = USERS.filter((user) => user.email == email);
+
+    res.send(response);
+  }
 });
 
 // post a single user to the list of users on the server
@@ -76,9 +88,15 @@ app.post("/api/users", (req, res) => {
 
 // gets the user info for one specific user
 app.get("/api/users/:userId", (req, res) => {
-  res.send(
-    "This endpoint returns the user info from server for a single user."
-  );
+  // declare a response variable of all users because this is the data we need to access and check
+  let response = USERS;
+
+  // access the request body using object destructuring
+  const { userId } = req.params;
+
+  response = USERS.filter((user) => user.id == userId);
+
+  res.send(response);
 });
 
 // deletes the info from the server for one specific user. deleting an account
