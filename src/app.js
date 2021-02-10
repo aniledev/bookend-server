@@ -29,16 +29,72 @@ app.use(express.json());
 
 // TEST API
 
-app.get("/api/result", (req, res) => {
+// get book list
+app.get("/api/results", (req, res) => {
   // use validation to send back a filtered list based on req.body
   res.send("This endpoint returns all books from server.");
 });
 
+// get on individual book result from the server
+app.get("/api/results/:resultId", (req, res) => {
+  res.send("This endpoint returns one individual book from server.");
+});
+
+// get personalized list of books for a user
+app.get("/api/users/:userId/books", (req, res) => {
+  res.send(
+    "This endpoint returns the user's personalized list from the server."
+  );
+});
+
+// posts a new book to the users personalized/saved list
+app.post("api/users/:userId/books", (req, res) => {
+  res.send(
+    "This endpoint posts a new book to the user's personalized list on the server."
+  );
+});
+
+// delete a book from personalized list of books
+app.delete("/api/users/:userId/books/:bookId", (req, res) => {
+  res.send(
+    "This endpoint deletes a book from the user's personalized list on the server."
+  );
+});
+
+// get all user information from the server for each user
+app.get("/api/users", (req, res) => {
+  res.send(
+    "This endpoint returns the user info from server for every single user."
+  );
+});
+
+// post a single user to the list of users on the server
+app.post("/api/users", (req, res) => {
+  res.send(
+    "This endpoint adds/posts a single user's information to the server."
+  );
+});
+
+// gets the user info for one specific user
+app.get("/api/users/:userId", (req, res) => {
+  res.send(
+    "This endpoint returns the user info from server for a single user."
+  );
+});
+
+// deletes the info from the server for one specific user. deleting an account
+app.delete("/api/users/:userId", (req, res) => {
+  res.send(
+    "This endpoint deletes a specific user info from the server for a single user."
+  );
+});
+
+// test api endpoint
 app.get("/api", (req, res) => {
   res.json({ ok: true });
 });
 
-// TEST EXPRESS WIRING
+// test express app wiring
 app.get("/", (req, res) => {
   res.send("Hello, world!");
 });
