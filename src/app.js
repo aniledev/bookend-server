@@ -91,19 +91,19 @@ app.post("/api/users", (req, res) => {
       logger.error(`${query} is required.`);
       return res.status(400).send(`${query} is required. Please try again.`);
     }
+
+    // create a new object to push to the store based on req body after validation
+    const user = { id: uuid(), name, email, password };
+
+    // push the newly created object to the store
+
+    USERS.push(user);
+
+    logger.info(`New user with id ${user.id} created successfully!`);
+
+    // return the appropriate status code and end()
+    return res.status(200).json(user);
   }
-
-  // create a new object to push to the store based on req body after validation
-  const user = { id: uuid(), name, email, password };
-
-  // push the newly created object to the store
-
-  USERS.push(user);
-
-  logger.info(`New user with id ${user.id} created successfully!`);
-
-  // return the appropriate status code and end()
-  res.status(200).json(user).send("New user created successfully!");
 });
 
 // gets the user info for one specific user
