@@ -13,3 +13,8 @@
 {"message":"New user with id 0544a4ff-9798-4064-b20b-63f1e3a6da40 created successfully!","level":"info"}
 {"message":"Email 'lovelyenm99@yahoo.com' not  found.","level":"error"}
 {"message":"Request processed successfully!","level":"info"}
+{"message":"User with id 5e8e56ea-1db5-4695-baea-bbcc378e2d2b not found.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"User with id 6a9f235f-93e7-4cee-871c-2b543279295d has been deleted.","level":"info"}
+{"message":"User with 6a9f235f-93e7-4cee-871c-2b543279295d not found.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}

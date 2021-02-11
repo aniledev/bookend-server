@@ -195,24 +195,6 @@ app.delete("/api/users/:userId/books/:bookId", (req, res) => {
 });
 
 /*
-// gets the user info for one specific user
-app.get("/api/users/:userId", (req, res) => {
-  // access the request object using object destructuring
-  const { userId } = req.params;
-
-  // use the find method to find user with a specific id
-  const user = USERS.find((user) => user.id == userId);
-
-  // validate if no user with that id is found
-  if (!user) {
-    logger.error(`User with ${userId} not found.`);
-    return res.status(400).send("User not found. Please try again.");
-  }
-  res.status(200).send(user);
-});
-
-*/
-
 // deletes the info from the server for one specific user. deleting an account
 app.delete("/api/users/:userId", (req, res) => {
   // destructure the req object to get the id of the user we want to delete
@@ -231,6 +213,7 @@ app.delete("/api/users/:userId", (req, res) => {
   logger.info(`User with id ${userId} has been deleted.`);
   res.status(204).end();
 });
+*/
 
 // test api endpoint
 app.get("/api", (req, res) => {
