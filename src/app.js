@@ -39,41 +39,7 @@ app.use(express.json());
 app.use("/api/users", userRouter);
 app.use("/api/results", resultRouter);
 
-// get dummy data book list from the server
 /*
-app.get("/api/results", (req, res) => {
-  // declare a variable for the response
-  let response = BOOKS;
-
-  // destructure the request object to get the query
-  const { title = "" } = req.query;
-
-  // create a filtered list where the request query matches the store data
-  if (title) {
-    if (title.length < 3) {
-      logger.error(
-        `Invalid query input for title: ${title}. Character length not satisfied.`
-      );
-      return res
-        .status(400)
-        .send("Title much be greater than 3 characters. Please try again.");
-    } else {
-      response = BOOKS.filter((book) =>
-        book["title"].toLowerCase().includes(title.toLowerCase())
-      );
-    }
-  }
-
-  if (response.length < 1 || response == undefined) {
-    logger.error(`Invalid query for ${title}. No matches found.`);
-    return res.status(200).send("No matches found. Please try again.");
-  }
-
-  logger.info("Request successfully processed.");
-  res.status(200).send(response);
-});
-*/
-
 // get one individual book result from the server
 app.get("/api/results/:resultId", (req, res) => {
   const { resultId } = req.params;
@@ -87,6 +53,8 @@ app.get("/api/results/:resultId", (req, res) => {
   logger.info("Result processed successfully.");
   res.status(200).json(book);
 });
+
+*/
 
 // get personalized list of books for a specific user
 app.get("/api/users/:userId/books", (req, res) => {
