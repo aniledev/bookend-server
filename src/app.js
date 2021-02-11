@@ -187,7 +187,6 @@ app.get("/api/users/:userId", (req, res) => {
     logger.error(`User with ${userId} not found.`);
     return res.status(400).send("User not found. Please try again.");
   }
-
   res.status(200).send(user);
 });
 
@@ -199,6 +198,10 @@ app.delete("/api/users/:userId", (req, res) => {
   // use the find index method to find the index of the user in the array that we want to delete
   const index = USERS.findIndex((user) => user.id === userId);
   // validate here
+  if (index === -1) {
+    logger.error(`User with id ${userId} not found.`);
+    return res.status(400).send("User not found. Please try again.");
+  }
 
   // use the splice method to remove 1 from the array at the index number, end()
   USERS.splice(index, 1);
