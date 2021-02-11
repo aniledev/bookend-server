@@ -7,7 +7,7 @@ const cors = require("cors");
 const winston = require("winston");
 const { NODE_ENV, PORT, CLIENT_ORIGIN } = require("./config");
 const errorHandler = require("./errorHandler");
-const router = require("./router");
+const userRouter = require("./userRouter");
 const logger = require("./logger");
 const uuid = require("uuid").v4;
 const DATA = require("./dummyStore");
@@ -32,7 +32,10 @@ app.use(
 );
 app.use(express.json());
 
+// API KEY HANDING ON THE SERVER IF NECESSARY
+
 //ROUTES
+app.use("/api/users", userRouter);
 
 // TEST API
 
@@ -69,40 +72,40 @@ app.delete("/api/users/:userId/books/:bookId", (req, res) => {
 });
 
 // get all user information from the server for each user
-app.get("/api/users", (req, res) => {
-  // declare a response variable of all users because this is the data we need to access and check
-  let response = USERS;
+// app.get("/api/users", (req, res) => {
+//   // declare a response variable of all users because this is the data we need to access and check
+//   let response = USERS;
 
-  // access the request body using object destructuring
-  const { email } = req.body;
+//   // access the request body using object destructuring
+//   const { email } = req.body;
 
-  // user does not input email
-  if (!email) {
-    logger.info("Request processed successfully!");
-    return res.json(response);
-  }
-  // email address format is wrong
-  if (!isEmail.validate(email)) {
-    logger.error(`Invalid email '${email}' entered.`);
-    return res
-      .status(400)
-      .send("Email must be a valid email address. Please try again.");
-  }
-  // email length is wrong
-  if (email.length < 3 || email.length > 320) {
-    return res.status(400).send("Email must be between 8 and 100 characters.");
-  }
-  // the email entered isn't found
-  if (USERS.filter((user) => user.email == email).length === 0) {
-    logger.error(`Email '${email}' not  found.`);
-    return res.status(400).send("Email not found. Please try again.");
-  } else {
-    // email passes validation
-    logger.info("Request processed successfully!");
-    response = USERS.filter((user) => user.email == email);
-    return res.json(response);
-  }
-});
+//   // user does not input email
+//   if (!email) {
+//     logger.info("Request processed successfully!");
+//     return res.json(response);
+//   }
+//   // email address format is wrong
+//   if (!isEmail.validate(email)) {
+//     logger.error(`Invalid email '${email}' entered.`);
+//     return res
+//       .status(400)
+//       .send("Email must be a valid email address. Please try again.");
+//   }
+//   // email length is wrong
+//   if (email.length < 3 || email.length > 320) {
+//     return res.status(400).send("Email must be between 8 and 100 characters.");
+//   }
+//   // the email entered isn't found
+//   if (USERS.filter((user) => user.email == email).length === 0) {
+//     logger.error(`Email '${email}' not  found.`);
+//     return res.status(400).send("Email not found. Please try again.");
+//   } else {
+//     // email passes validation
+//     logger.info("Request processed successfully!");
+//     response = USERS.filter((user) => user.email == email);
+//     return res.json(response);
+//   }
+// });
 
 // post a single user to the list of users on the server
 app.post("/api/users", (req, res) => {
