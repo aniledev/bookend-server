@@ -105,11 +105,22 @@ app.delete("/api/users/:userId/books/:bookId", (req, res) => {
   // access requst params
   const { userId, bookId } = req.params;
 
-  // find the user with specific id
+  // find the user with specific id and find index of specific book with bookId
   const user = USERS.find((user) => user.id == userId);
   const bookList = user["list"]["books"];
-
   const index = bookList.findIndex((book) => book.id == bookId);
+
+  // validate user
+  if (!user) {
+    logger.error(`User with ${userId} not found.`);
+    return res.status(400).send("User not found. Please try again.");
+  }
+
+  // validate here
+  if (index === -1) {
+    logger.error(`Book with id ${bookId} not found.`);
+    return res.status(400).send("Book not found. Please try again.");
+  }
 
   // use splice method to remove 1 from array at index
   bookList.splice(index, 1);
