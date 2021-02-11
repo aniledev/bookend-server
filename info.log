@@ -42,3 +42,6 @@
 {"message":"The field 'password' is required.","level":"error"}
 {"message":"New user with id 319b095a-d172-47d1-b8b1-978a9252efd2 created successfully!","level":"info"}
 {"message":"Invalid email 'snasro.nasro.9' entered.","level":"error"}
+{"message":"Invalid email 'snasro.nasro.9' entered.","level":"error"}
+{"message":"Invalid email '@.' entered.","level":"error"}
+{"message":"New user with id 63a97b52-b0da-4def-bf4a-94503aa1cc5b created successfully!","level":"info"}

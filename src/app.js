@@ -13,6 +13,7 @@ const uuid = require("uuid").v4;
 const DATA = require("./dummyStore");
 const USERS = require("./userStore");
 const isEmail = require("email-validator");
+const passwordValidator = require("password-validator");
 
 const app = express();
 
