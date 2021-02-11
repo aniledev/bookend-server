@@ -93,8 +93,20 @@ app.get("/api/users/:userId/books", (req, res) => {
   res.status(200).json(user["list"]);
 });
 
+// get one individual book from a users lists
 app.get("/api/users/:userId/books/:bookId", (req, res) => {
-  res.send("This gets one book from a specific user");
+  // access request params
+  const { userId, bookId } = req.params;
+
+  // find the user with specific id and find index of specific book with bookId
+  const user = USERS.find((user) => user.id == userId);
+
+  const bookList = user["list"]["books"];
+
+  // find specific book in the list based on bookId
+  const book = bookList.find((book) => book.id == bookId);
+
+  res.send(book);
 });
 
 // posts a new book to the users personalized/saved list
