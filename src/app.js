@@ -123,9 +123,69 @@ app.get("/api/users/:userId/books/:bookId", (req, res) => {
 
 // posts a new book to the users personalized/saved list
 app.post("/api/users/:userId/books", (req, res) => {
-  res.send(
-    "This endpoint posts a new book to the user's personalized list on the server."
-  );
+  const { userId } = req.params;
+  const {
+    title,
+    isbn,
+    pageCount,
+    publishedDate,
+    thumbnailUrl,
+    shortDescription,
+    longDescription,
+    status,
+    authors,
+    categories,
+  } = req.body;
+
+  // validate if any field in the object is empty
+  for (const query of [
+    "title",
+    "authors",
+    "shortDescription",
+    "categories",
+    "thumbnailUrl",
+  ]) {
+    if (!req.body[query]) {
+      logger.error(`The field '${query}' is required.`);
+      return res
+        .status(400)
+        .send(`The field '${query}' is required. Please try again.`);
+    }
+  }
+
+  // find the user with specific id and find index of specific book with bookId
+  const user = USERS.find((user) => user.id == userId);
+  // validate if no user with that id is found
+  if (!user) {
+    logger.error(`User with ${userId} not found.`);
+    return res.status(400).send("User not found. Please try again.");
+  }
+
+  const bookList = user["list"]["books"];
+  if (bookList == undefined) {
+    logger.error(`Book list for user ${userId} not found/undefined.`);
+    return res.status(400).send("Book not found. Please try again.");
+  }
+
+  const book = {
+    id: uuid(),
+    title,
+    isbn: "",
+    pageCount: "",
+    publishedDate: "",
+    thumbnailUrl,
+    shortDescription,
+    longDescription: "",
+    status: "",
+    authors,
+    categories,
+  };
+
+  bookList.push(book);
+
+  logger.info(`New book with id ${book.id} created successfully!`);
+
+  return res.status(200).send("New book created!");
 });
 
 // delete a book from personalized list of books

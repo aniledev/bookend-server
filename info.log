@@ -19,3 +19,16 @@
 {"message":"Request processed successfully!","level":"info"}
 {"message":"Request processed successfully!","level":"info"}
 {"message":"Request processed successfully!","level":"info"}
+{"message":"User with fe15ffa0-6726-46c3-af77-69e60049c0f8 not found.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"The field 'id' is required.","level":"error"}
+{"message":"The field 'thumbnailUrl' is required.","level":"error"}
+{"message":"The field 'name' is required.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"New book with id e2775079-f890-4fb5-8b55-35e96f7af528 created successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"The field 'name' is required.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"New book with id 49672da4-3bb5-41fb-b738-eaf5fe22cc31 created successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
