@@ -85,7 +85,7 @@ app.get("/api/users", (req, res) => {
       .send("Email must be a valid email address. Please try again.");
   }
   // email length is wrong
-  if (email.length < 8 || email.length > 100) {
+  if (email.length < 3 || email.length > 320) {
     return res.status(400).send("Email must be between 8 and 100 characters.");
   }
   // the email entered isn't found
