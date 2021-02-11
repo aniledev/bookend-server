@@ -15,3 +15,4 @@
 {"message":"New user with id 08b2ade7-11ab-40df-b320-8cc56ef91cba created successfully!","level":"info"}
 {"message":"User with id 08b2ade7-11ab-40df-b320-8cc56ef91cba has been deleted.","level":"info"}
 {"message":"User with id f96cf5f7-5378-4ea6-9c80-65c6bf471073 has been deleted.","level":"info"}
+{"message":"Invalid email 'pistill.ok@coullion' entered.","level":"error"}

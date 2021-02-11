@@ -12,6 +12,7 @@ const logger = require("./logger");
 const uuid = require("uuid").v4;
 const DATA = require("./dummyStore");
 const USERS = require("./userStore");
+const isEmail = require("email-validator");
 
 const app = express();
 
@@ -71,12 +72,24 @@ app.get("/api/users", (req, res) => {
   // access the request body using object destructuring
   const { email } = req.body;
 
+  // user does not input email
   if (!email) {
-    res.json(response);
+    return res.json(response);
+  }
+  // email address format is wrong
+  if (!isEmail.validate(email)) {
+    logger.error(`Invalid email '${email}' entered.`);
+    return res
+      .status(400)
+      .send("Email must be a valid email address. Please try again.");
+  }
+  // the email entered isn't found
+  if (USERS.filter((user) => user.email == email).length === 0) {
+    return res.status(400).send("Email not found. Please try again.");
   } else {
+    // email passes validation
     response = USERS.filter((user) => user.email == email);
-
-    res.json(response);
+    return res.json(response);
   }
 });
 
