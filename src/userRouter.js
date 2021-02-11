@@ -128,6 +128,24 @@ userRouter
     return res.status(200).send("New user created!");
   });
 
-userRouter.route("/:userId").get((req, res) => {});
+userRouter
+  .route("/:userId")
+  // gets the user info for one specific user
+  .get((req, res) => {
+    // access the request object using object destructuring
+    const { userId } = req.params;
+
+    // use the find method to find user with a specific id
+    const user = USERS.find((user) => user.id == userId);
+
+    // validate if no user with that id is found
+    if (!user) {
+      logger.error(`User with ${userId} not found.`);
+      return res.status(400).send("User not found. Please try again.");
+    }
+    res.status(200).send(user);
+  })
+  // deletes the info from the server for one specific user. deleting an account
+  .delete((req, res) => {});
 
 module.exports = userRouter;

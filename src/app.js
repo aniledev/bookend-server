@@ -195,77 +195,6 @@ app.delete("/api/users/:userId/books/:bookId", (req, res) => {
 });
 
 /*
-// post a single user to the list of users on the server
-app.post("/api/users", (req, res) => {
-  // use object destructuring for the request body
-  const { name, email, password } = req.body;
-
-  // validate if any field in the object is empty
-  for (const query of ["name", "email", "password"]) {
-    if (!req.body[query]) {
-      logger.error(`The field '${query}' is required.`);
-      return res
-        .status(400)
-        .send(`The field '${query}' is required. Please try again.`);
-    }
-  }
-
-  // validate if the field is not a string
-  for (const query of ["name", "email", "password"]) {
-    if (typeof req.body[query] !== "string") {
-      logger.error(`The field '${query}' must be a string.`);
-      return res
-        .status(400)
-        .send(
-          `The field '${query}' is incorrectly formatted. Please try again.`
-        );
-    }
-  }
-
-  // email address format is wrong
-  if (!isEmail.validate(email)) {
-    logger.error(`Invalid email '${email}' entered.`);
-    return res
-      .status(400)
-      .send("Email must be a valid email address. Please try again.");
-  }
-
-  // if password format is wrong
-  if (!schema.validate(password)) {
-    logger.error(
-      `Invalid password '${password}' entered. The following rules failed: ${schema.validate(
-        password,
-        { list: true }
-      )}`
-    );
-    return res
-      .status(400)
-      .send("Password must be a valid password. Please try again.");
-  }
-
-  // validate if the name field is not the correct length
-  if (name.length < 3 || name.length > 50) {
-    return res.status(400).send("Name must be between 3 and 50 characters.");
-  }
-  // validate if the email field is not the correct length
-  if (email.length < 3 || email.length > 320) {
-    return res.status(400).send("Email must be between 3 and 320 characters.");
-  }
-
-  // create a new object to push to the store based on req body after validation
-  const user = { id: uuid(), name, email, password };
-
-  // push the newly created object to the store
-
-  USERS.push(user);
-
-  logger.info(`New user with id ${user.id} created successfully!`);
-
-  // return the appropriate status code and end()
-  return res.status(200).send("New user created!");
-});
-*/
-
 // gets the user info for one specific user
 app.get("/api/users/:userId", (req, res) => {
   // access the request object using object destructuring
@@ -281,6 +210,8 @@ app.get("/api/users/:userId", (req, res) => {
   }
   res.status(200).send(user);
 });
+
+*/
 
 // deletes the info from the server for one specific user. deleting an account
 app.delete("/api/users/:userId", (req, res) => {
