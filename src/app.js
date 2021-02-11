@@ -93,6 +93,10 @@ app.get("/api/users/:userId/books", (req, res) => {
   res.status(200).json(user["list"]);
 });
 
+app.get("/api/users/:userId/books/:bookId", (req, res) => {
+  res.send("This gets one book from a specific user");
+});
+
 // posts a new book to the users personalized/saved list
 app.post("/api/users/:userId/books", (req, res) => {
   res.send(
@@ -102,19 +106,20 @@ app.post("/api/users/:userId/books", (req, res) => {
 
 // delete a book from personalized list of books
 app.delete("/api/users/:userId/books/:bookId", (req, res) => {
-  // access requst params
+  // access request params
   const { userId, bookId } = req.params;
 
   // find the user with specific id and find index of specific book with bookId
   const user = USERS.find((user) => user.id == userId);
-  const bookList = user["list"]["books"];
-  const index = bookList.findIndex((book) => book.id == bookId);
 
   // validate user
   if (!user) {
     logger.error(`User with ${userId} not found.`);
     return res.status(400).send("User not found. Please try again.");
   }
+
+  const bookList = user["list"]["books"];
+  const index = bookList.findIndex((book) => book.id == bookId);
 
   // validate here
   if (index === -1) {
