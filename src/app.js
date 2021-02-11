@@ -83,10 +83,10 @@ app.get("/api/users", (req, res) => {
 // post a single user to the list of users on the server
 app.post("/api/users", (req, res) => {
   // use object destructuring for the request body
-  const { id, name, email, password } = req.body;
+  const { name, email, password } = req.body;
 
   // validate if any field in the object is empty
-  for (const query of ["id", "name", "email", "password"]) {
+  for (const query of ["name", "email", "password"]) {
     if (!req.body[query]) {
       logger.error(`${query} is required.`);
       return res.status(400).send(`${query} is required. Please try again.`);
@@ -100,10 +100,10 @@ app.post("/api/users", (req, res) => {
 
   USERS.push(user);
 
-  logger.info(`New user with id ${id} created successfully!`);
+  logger.info(`New user with id ${user.id} created successfully!`);
 
   // return the appropriate status code and end()
-  res.status(201).json(user).send("New user created successfully!");
+  res.status(200).json(user).send("New user created successfully!");
 });
 
 // gets the user info for one specific user

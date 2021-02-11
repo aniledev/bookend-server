@@ -2,3 +2,7 @@
 {"message":"id is required.","level":"error"}
 {"message":"New user created successfully!","level":"info"}
 {"message":"New user created successfully!","level":"info"}
+{"message":"id is required.","level":"error"}
+{"message":"id is required.","level":"error"}
+{"message":"New user with id c5d5c15a-fe28-4fa6-8be3-99bba06057c9 created successfully!","level":"info"}
+{"message":"New user with id 007e74fe-bad3-4bf9-884f-3adf1059c767 created successfully!","level":"info"}
