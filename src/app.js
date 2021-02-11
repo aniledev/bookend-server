@@ -111,7 +111,7 @@ app.get("/api/users/:userId", (req, res) => {
   // declare a response variable of all users because this is the data we need to access and check
   let response = USERS;
 
-  // access the request params using object destructuring
+  // access the request object using object destructuring
   const { userId } = req.params;
 
   response = USERS.filter((user) => user.id == userId);
@@ -122,14 +122,16 @@ app.get("/api/users/:userId", (req, res) => {
 // deletes the info from the server for one specific user. deleting an account
 app.delete("/api/users/:userId", (req, res) => {
   // destructure the req object to get the id of the user we want to delete
-  // use the find index method to find the index of the user in the array that we want to delete
+  const { userId } = req.params;
 
+  // use the find index method to find the index of the user in the array that we want to delete
+  const index = USERS.findIndex((user) => user.id === userId);
   // validate here
 
-  // use the splice method to remove 1 from the array at the index nnumber, end()
-  res.send(
-    "This endpoint deletes a specific user info from the server for a single user."
-  );
+  // use the splice method to remove 1 from the array at the index number, end()
+  USERS.splice(index, 1);
+  logger.info(`User with id ${userId} has been deleted.`);
+  res.status(204).end();
 });
 
 // test api endpoint
