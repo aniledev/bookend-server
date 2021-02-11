@@ -72,7 +72,16 @@ app.get("/api/results", (req, res) => {
 
 // get one individual book result from the server
 app.get("/api/results/:resultId", (req, res) => {
-  res.send("This endpoint returns one individual book from server.");
+  const { resultId } = req.params;
+
+  const book = BOOKS.find((book) => book.id == resultId);
+  // validate book
+  if (!book) {
+    logger.error(`User with ${userId} not found.`);
+    return res.status(400).send("User not found. Please try again.");
+  }
+  logger.info("Result processed successfully.");
+  res.status(200).json(book);
 });
 
 // get personalized list of books for a specific user
