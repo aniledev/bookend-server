@@ -14,6 +14,9 @@ const DATA = require("./dummyStore");
 const USERS = require("./userStore");
 const isEmail = require("email-validator");
 const passwordValidator = require("password-validator");
+const schema = new passwordValidator();
+
+schema.is().min(8).has().uppercase(1).has().lowercase(1).has().digits(1);
 
 const app = express();
 
@@ -134,6 +137,19 @@ app.post("/api/users", (req, res) => {
     return res
       .status(400)
       .send("Email must be a valid email address. Please try again.");
+  }
+
+  // if password format is wrong
+  if (!schema.validate(password)) {
+    logger.error(
+      `Invalid password '${password}' entered. The following rules failed: ${schema.validate(
+        password,
+        { list: true }
+      )}`
+    );
+    return res
+      .status(400)
+      .send("Password must be a valid password. Please try again.");
   }
 
   // validate if the name field is not the correct length
