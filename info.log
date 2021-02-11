@@ -6,3 +6,5 @@
 {"message":"Invalid email 'l' entered.","level":"error"}
 {"message":"Invalid password 'Ma' entered. The following rules failed: min,digits","level":"error"}
 {"message":"Invalid password 'Ma' entered. The following rules failed: min,digits","level":"error"}
+{"message":"New user with id e346718f-a554-43cb-89fd-7a6135baf77b created successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}

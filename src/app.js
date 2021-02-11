@@ -160,7 +160,6 @@ app.post("/api/users", (req, res) => {
   if (email.length < 3 || email.length > 320) {
     return res.status(400).send("Email must be between 3 and 320 characters.");
   }
-  
 
   // create a new object to push to the store based on req body after validation
   const user = { id: uuid(), name, email, password };
@@ -183,6 +182,12 @@ app.get("/api/users/:userId", (req, res) => {
   // access the request object using object destructuring
   const { userId } = req.params;
 
+  if (!userId) {
+    // code here
+  }
+  if (USERS.filter((user) => user.id == userId).length === 0) {
+    // code here
+  }
   response = USERS.filter((user) => user.id == userId);
 
   res.send(response);
