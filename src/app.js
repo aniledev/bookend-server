@@ -182,13 +182,16 @@ app.get("/api/users/:userId", (req, res) => {
   // access the request object using object destructuring
   const { userId } = req.params;
 
-  if (!userId) {
-    // code here
+  // use the find method to find user with a specific id
+  const user = USERS.find((user) => user.id == userId);
+
+  // validate if no user with that id is found
+  if (!user) {
+    logger.error(`User with ${userId} not found.`);
+    return res.status(400).send("User not found. Please try again.");
   }
-  if (USERS.filter((user) => user.id == userId).length === 0) {
-    // code here
-  }
-  response = USERS.filter((user) => user.id == userId);
+
+  response = USERS.filter((user) => user.id === userId);
 
   res.send(response);
 });
