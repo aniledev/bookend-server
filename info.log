@@ -1,2 +1,4 @@
 {"message":"Invalid query input for title: so.","level":"error"}
 {"message":"Invalid query input for title: so. Character length not satisfied.","level":"error"}
+{"message":"Request successfully processed.","level":"info"}
+{"message":"Request successfully processed.","level":"info"}

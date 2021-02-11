@@ -6,6 +6,10 @@ const USERS = [
     name: "Elina",
     email: "elinamcgill@gmail.com",
     password: "Manifesting2021!",
+    listId: uuid(),
+    books: {
+      
+    }
   },
   {
     id: uuid(),

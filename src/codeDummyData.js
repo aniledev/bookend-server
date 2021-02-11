@@ -1,6 +1,6 @@
 const BOOKS = [
   {
-    _id: 1,
+    id: 1,
     title: "Unlocking Android",
     isbn: "1933988673",
     pageCount: 416,
@@ -18,7 +18,7 @@ const BOOKS = [
     categories: ["Open Source", "Mobile"],
   },
   {
-    _id: 2,
+    id: 2,
     title: "Android in Action, Second Edition",
     isbn: "1935182722",
     pageCount: 592,
@@ -36,7 +36,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 3,
+    id: 3,
     title: "Specification by Example",
     isbn: "1617290084",
     pageCount: 0,
@@ -50,7 +50,7 @@ const BOOKS = [
     categories: ["Software Engineering"],
   },
   {
-    _id: 4,
+    id: 4,
     title: "Flex 3 in Action",
     isbn: "1933988746",
     pageCount: 576,
@@ -66,7 +66,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 5,
+    id: 5,
     title: "Flex 4 in Action",
     isbn: "1935182420",
     pageCount: 600,
@@ -82,7 +82,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 6,
+    id: 6,
     title: "Collective Intelligence in Action",
     isbn: "1933988312",
     pageCount: 425,
@@ -98,7 +98,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 7,
+    id: 7,
     title: "Zend Framework in Action",
     isbn: "1933988320",
     pageCount: 432,
@@ -116,7 +116,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 8,
+    id: 8,
     title: "Flex on Java",
     isbn: "1933988797",
     pageCount: 265,
@@ -134,7 +134,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 9,
+    id: 9,
     title: "Griffon in Action",
     isbn: "1935182234",
     pageCount: 375,
@@ -152,7 +152,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 10,
+    id: 10,
     title: "OSGi in Depth",
     isbn: "193518217X",
     pageCount: 325,
@@ -170,7 +170,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 11,
+    id: 11,
     title: "Flexible Rails",
     isbn: "1933988509",
     pageCount: 592,
@@ -188,7 +188,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 13,
+    id: 13,
     title: "Hello! Flex 4",
     isbn: "1933988762",
     pageCount: 258,
@@ -206,7 +206,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 14,
+    id: 14,
     title: "Coffeehouse",
     isbn: "1884777384",
     pageCount: 316,
@@ -224,7 +224,7 @@ const BOOKS = [
     categories: ["Miscellaneous"],
   },
   {
-    _id: 15,
+    id: 15,
     title: "Team Foundation Server 2008 in Action",
     isbn: "1933988592",
     pageCount: 344,
@@ -240,7 +240,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 16,
+    id: 16,
     title: "Brownfield Application Development in .NET",
     isbn: "1933988711",
     pageCount: 550,
@@ -258,7 +258,7 @@ const BOOKS = [
     categories: ["Microsoft"],
   },
   {
-    _id: 17,
+    id: 17,
     title: "MongoDB in Action",
     isbn: "1935182870",
     pageCount: 0,
@@ -276,7 +276,7 @@ const BOOKS = [
     categories: ["Next Generation Databases"],
   },
   {
-    _id: 18,
+    id: 18,
     title: "Distributed Application Development with PowerBuilder 6.0",
     isbn: "1884777686",
     pageCount: 504,
@@ -290,7 +290,7 @@ const BOOKS = [
     categories: ["PowerBuilder"],
   },
   {
-    _id: 19,
+    id: 19,
     title: "Jaguar Development with PowerBuilder 7",
     isbn: "1884777864",
     pageCount: 550,
@@ -308,7 +308,7 @@ const BOOKS = [
     categories: ["PowerBuilder", "Client-Server"],
   },
   {
-    _id: 20,
+    id: 20,
     title: "Taming Jaguar",
     isbn: "1884777686",
     pageCount: 362,
@@ -324,7 +324,7 @@ const BOOKS = [
     categories: ["PowerBuilder"],
   },
   {
-    _id: 21,
+    id: 21,
     title: "3D User Interfaces with Java 3D",
     isbn: "1884777902",
     pageCount: 520,
@@ -340,7 +340,7 @@ const BOOKS = [
     categories: ["Java", "Computer Graphics"],
   },
   {
-    _id: 22,
+    id: 22,
     title: "Hibernate in Action",
     isbn: "193239415X",
     pageCount: 400,
@@ -357,7 +357,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 23,
+    id: 23,
     title: "Hibernate in Action (Chinese Edition)",
     pageCount: 400,
     publishedDate: {
@@ -370,7 +370,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 24,
+    id: 24,
     title: "Java Persistence with Hibernate",
     isbn: "1932394885",
     pageCount: 880,
@@ -388,7 +388,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 25,
+    id: 25,
     title: "JSTL in Action",
     isbn: "1930110529",
     pageCount: 480,
@@ -404,7 +404,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 26,
+    id: 26,
     title: "iBATIS in Action",
     isbn: "1932394826",
     pageCount: 384,
@@ -422,7 +422,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 27,
+    id: 27,
     title: "Designing Hard Software",
     isbn: "133046192",
     pageCount: 350,
@@ -438,7 +438,7 @@ const BOOKS = [
     categories: ["Object-Oriented Programming", "S"],
   },
   {
-    _id: 28,
+    id: 28,
     title: "Hibernate Search in Action",
     isbn: "1933988649",
     pageCount: 488,
@@ -456,7 +456,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 29,
+    id: 29,
     title: "jQuery in Action",
     isbn: "1933988355",
     pageCount: 376,
@@ -474,7 +474,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 30,
+    id: 30,
     title: "jQuery in Action, Second Edition",
     isbn: "1935182323",
     pageCount: 488,
@@ -492,7 +492,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 31,
+    id: 31,
     title: "Building Secure and Reliable Network Applications",
     isbn: "1884777295",
     pageCount: 591,
@@ -510,7 +510,7 @@ const BOOKS = [
     categories: ["Networking", "Theory"],
   },
   {
-    _id: 32,
+    id: 32,
     title: "Ruby for Rails",
     isbn: "1932394699",
     pageCount: 532,
@@ -528,7 +528,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 33,
+    id: 33,
     title: "The Well-Grounded Rubyist",
     isbn: "1933988657",
     pageCount: 520,
@@ -546,7 +546,7 @@ const BOOKS = [
     categories: ["Programming"],
   },
   {
-    _id: 35,
+    id: 35,
     title: "Website Owner's Manual",
     isbn: "1933988452",
     pageCount: 296,
@@ -564,7 +564,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 36,
+    id: 36,
     title: "ASP.NET 4.0 in Practice",
     isbn: "1935182463",
     pageCount: 504,
@@ -582,7 +582,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 37,
+    id: 37,
     title: "Hello! Python",
     isbn: "1935182080",
     pageCount: 350,
@@ -600,7 +600,7 @@ const BOOKS = [
     categories: ["Python"],
   },
   {
-    _id: 38,
+    id: 38,
     title: "PFC Programmer's Reference Manual",
     isbn: "1884777554",
     pageCount: 368,
@@ -616,7 +616,7 @@ const BOOKS = [
     categories: ["PowerBuilder"],
   },
   {
-    _id: 39,
+    id: 39,
     title: "Graphics File Formats",
     isbn: "133034054",
     pageCount: 484,
@@ -632,7 +632,7 @@ const BOOKS = [
     categories: ["Computer Graphics"],
   },
   {
-    _id: 40,
+    id: 40,
     title: "Visual Object Oriented Programming",
     isbn: "131723979",
     pageCount: 280,
@@ -648,7 +648,7 @@ const BOOKS = [
     categories: ["Programming"],
   },
   {
-    _id: 41,
+    id: 41,
     title: "iOS in Practice",
     isbn: "1617291269",
     pageCount: 325,
@@ -662,7 +662,7 @@ const BOOKS = [
     categories: ["Mobile Technology"],
   },
   {
-    _id: 42,
+    id: 42,
     title: "iPhone in Action",
     isbn: "193398886X",
     pageCount: 472,
@@ -680,7 +680,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 43,
+    id: 43,
     title: "Silverlight 2 in Action",
     isbn: "1933988428",
     pageCount: 400,
@@ -698,7 +698,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 45,
+    id: 45,
     title: "The Quick Python Book, Second Edition",
     isbn: "193518220X",
     pageCount: 360,
@@ -716,7 +716,7 @@ const BOOKS = [
     categories: ["Python"],
   },
   {
-    _id: 46,
+    id: 46,
     title: "Internet and Intranet Applications with PowerBuilder 6",
     isbn: "1884777600",
     pageCount: 390,
@@ -732,7 +732,7 @@ const BOOKS = [
     categories: ["PowerBuilder"],
   },
   {
-    _id: 48,
+    id: 48,
     title: "Practical Methods for Your Year 2000 Problem",
     isbn: "188477752X",
     pageCount: 236,
@@ -748,7 +748,7 @@ const BOOKS = [
     categories: ["Business"],
   },
   {
-    _id: 51,
+    id: 51,
     title: "Mobile Agents",
     isbn: "1884777368",
     pageCount: 320,
@@ -766,7 +766,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 52,
+    id: 52,
     title: "Spring Dynamic Modules in Action",
     isbn: "1935182307",
     pageCount: 450,
@@ -784,7 +784,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 53,
+    id: 53,
     title: "SQL Server 2008 Administration in Action",
     isbn: "193398872X",
     pageCount: 468,
@@ -800,7 +800,7 @@ const BOOKS = [
     categories: ["Microsoft"],
   },
   {
-    _id: 54,
+    id: 54,
     title: "Android in Practice",
     isbn: "1935182927",
     pageCount: 500,
@@ -818,7 +818,7 @@ const BOOKS = [
     categories: ["Mobile Technology"],
   },
   {
-    _id: 55,
+    id: 55,
     title: "Object Oriented Perl",
     isbn: "1884777791",
     pageCount: 512,
@@ -834,7 +834,7 @@ const BOOKS = [
     categories: ["Object-Oriented Programming", "P"],
   },
   {
-    _id: 56,
+    id: 56,
     title: "GWT in Practice",
     isbn: "1933988290",
     pageCount: 376,
@@ -850,7 +850,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 59,
+    id: 59,
     title: "Ajax in Action",
     isbn: "1932394613",
     pageCount: 680,
@@ -866,7 +866,7 @@ const BOOKS = [
     categories: ["XML", "Internet"],
   },
   {
-    _id: 60,
+    id: 60,
     title: "Ajax in Practice",
     isbn: "1932394990",
     pageCount: 536,
@@ -888,7 +888,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 61,
+    id: 61,
     title: "Prototype and Scriptaculous in Action",
     isbn: "1933988037",
     pageCount: 544,
@@ -904,7 +904,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 63,
+    id: 63,
     title: "POJOs in Action",
     isbn: "1932394583",
     pageCount: 592,
@@ -922,7 +922,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 64,
+    id: 64,
     title: "Data Munging with Perl",
     isbn: "1930110006",
     pageCount: 304,
@@ -938,7 +938,7 @@ const BOOKS = [
     categories: ["Perl"],
   },
   {
-    _id: 65,
+    id: 65,
     title: "Hello! HTML5 & CSS3",
     isbn: "1935182897",
     pageCount: 325,
@@ -956,7 +956,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 66,
+    id: 66,
     title: "Seam in Action",
     isbn: "1933988401",
     pageCount: 624,
@@ -974,7 +974,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 67,
+    id: 67,
     title: "Wicket in Action",
     isbn: "1932394982",
     pageCount: 392,
@@ -990,7 +990,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 68,
+    id: 68,
     title: "Open Source SOA",
     isbn: "1933988541",
     pageCount: 448,
@@ -1006,7 +1006,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 69,
+    id: 69,
     title: "Struts 2 in Action",
     isbn: "193398807X",
     pageCount: 432,
@@ -1022,7 +1022,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 70,
+    id: 70,
     title: "Essential Guide to Peoplesoft Development and Customization",
     isbn: "1884777929",
     pageCount: 1101,
@@ -1043,7 +1043,7 @@ const BOOKS = [
     categories: ["Client-Server"],
   },
   {
-    _id: 71,
+    id: 71,
     title: ".NET Multithreading",
     isbn: "1930110545",
     pageCount: 360,
@@ -1059,7 +1059,7 @@ const BOOKS = [
     categories: ["Microsoft .NET", "Internet"],
   },
   {
-    _id: 72,
+    id: 72,
     title: "SCWCD Exam Study Kit Second Edition",
     isbn: "1932394389",
     pageCount: 560,
@@ -1075,7 +1075,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 73,
+    id: 73,
     title: "Spring Roo in Action",
     isbn: "193518296X",
     pageCount: 500,
@@ -1089,7 +1089,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 74,
+    id: 74,
     title: "SOA Governance in Action",
     isbn: "1617290270",
     pageCount: 0,
@@ -1103,7 +1103,7 @@ const BOOKS = [
     categories: ["java"],
   },
   {
-    _id: 75,
+    id: 75,
     title: "RSS and Atom in Action",
     isbn: "1932394494",
     pageCount: 400,
@@ -1119,7 +1119,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 76,
+    id: 76,
     title: "LDAP Programming, Management and Integration",
     isbn: "1930110405",
     pageCount: 352,
@@ -1135,7 +1135,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 77,
+    id: 77,
     title: "Mule in Action",
     isbn: "1933988967",
     pageCount: 432,
@@ -1151,7 +1151,7 @@ const BOOKS = [
     categories: ["Java", "Software Engineering"],
   },
   {
-    _id: 79,
+    id: 79,
     title: "Java Foundation Classes",
     isbn: "1884777678",
     pageCount: 1088,
@@ -1167,7 +1167,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 117,
+    id: 117,
     title: "Managing Components with Modeler",
     isbn: "1932394524k-e",
     pageCount: 0,
@@ -1181,7 +1181,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 118,
+    id: 118,
     title: "Command-line Processing with CLI",
     isbn: "1932394524l-e",
     pageCount: 0,
@@ -1195,7 +1195,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 119,
+    id: 119,
     title: "Understanding and Using Chain",
     isbn: "1932394524m-e",
     pageCount: 0,
@@ -1209,7 +1209,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 120,
+    id: 120,
     title: "Working with the Logging and Discovery Components",
     isbn: "1932394524n-e",
     pageCount: 0,
@@ -1223,7 +1223,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 121,
+    id: 121,
     title: "Uploading files with FileUpload",
     isbn: "1932394524b-e",
     pageCount: 0,
@@ -1237,7 +1237,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 122,
+    id: 122,
     title: "Handling Protocols with the Net Component",
     isbn: "1932394524c-e",
     pageCount: 0,
@@ -1251,7 +1251,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 123,
+    id: 123,
     title: "XML Parsing with Digester",
     isbn: "1932394524d-e",
     pageCount: 0,
@@ -1265,7 +1265,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 124,
+    id: 124,
     title: "JXPath and Betwixt: Working with XML",
     isbn: "1932394524e-e",
     pageCount: 0,
@@ -1279,7 +1279,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 125,
+    id: 125,
     title: "Validating Data with Validator",
     isbn: "1932394524f-e",
     pageCount: 0,
@@ -1293,7 +1293,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 126,
+    id: 126,
     title: "Enhancing Java Core Libraries with Collections",
     isbn: "1932394524g-e",
     pageCount: 0,
@@ -1307,7 +1307,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 127,
+    id: 127,
     title: "Enhancing Java Core Libraries with BeanUtils and Lang",
     isbn: "1932394524h-e",
     pageCount: 0,
@@ -1321,7 +1321,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 128,
+    id: 128,
     title: "Pool and DBCP: Creating and Using Object Pools",
     isbn: "1932394524i-e",
     pageCount: 0,
@@ -1335,7 +1335,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 129,
+    id: 129,
     title: "Python and Tkinter Programming",
     isbn: "1884777813",
     pageCount: 688,
@@ -1351,7 +1351,7 @@ const BOOKS = [
     categories: ["Python"],
   },
   {
-    _id: 130,
+    id: 130,
     title: "Microsoft.NET for Programmers",
     isbn: "1930110197",
     pageCount: 386,
@@ -1367,7 +1367,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 131,
+    id: 131,
     title: "Grails in Action",
     isbn: "1933988932",
     pageCount: 520,
@@ -1385,7 +1385,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 132,
+    id: 132,
     title: "Up to Speed with Swing, Second Edition",
     isbn: "1884777759",
     pageCount: 560,
@@ -1403,7 +1403,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 133,
+    id: 133,
     title: "OSGi in Action",
     isbn: "1933988916",
     pageCount: 576,
@@ -1427,7 +1427,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 135,
+    id: 135,
     title: "GWT in Action",
     isbn: "1933988231",
     pageCount: 632,
@@ -1443,7 +1443,7 @@ const BOOKS = [
     categories: ["Internet", "Java"],
   },
   {
-    _id: 136,
+    id: 136,
     title: "The Quick Python Book",
     isbn: "1884777740",
     pageCount: 444,
@@ -1459,7 +1459,7 @@ const BOOKS = [
     categories: ["Python"],
   },
   {
-    _id: 137,
+    id: 137,
     title: "SharePoint 2010 Site Owner's Manual",
     isbn: "1933988754",
     pageCount: 300,
@@ -1477,7 +1477,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 139,
+    id: 139,
     title: "Java Development with Ant",
     isbn: "1930110588",
     pageCount: 672,
@@ -1495,7 +1495,7 @@ const BOOKS = [
     categories: ["Java", "Internet"],
   },
   {
-    _id: 140,
+    id: 140,
     title: "Lucene in Action",
     isbn: "1932394281",
     pageCount: 456,
@@ -1511,7 +1511,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 141,
+    id: 141,
     title: "Lucene in Action, Second Edition",
     isbn: "1933988177",
     pageCount: 532,
@@ -1529,7 +1529,7 @@ const BOOKS = [
     categories: ["Java", "Open Source"],
   },
   {
-    _id: 142,
+    id: 142,
     title: "PowerBuilder 6.0 Questions & Answers",
     isbn: "1884777708",
     pageCount: 446,
@@ -1547,7 +1547,7 @@ const BOOKS = [
     categories: ["PowerBuilder"],
   },
   {
-    _id: 143,
+    id: 143,
     title: "The Awesome Power of PowerJ",
     isbn: "1884777538",
     pageCount: 378,
@@ -1565,7 +1565,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 144,
+    id: 144,
     title: "The Awesome Power of Power++",
     isbn: "1884777546",
     pageCount: 416,
@@ -1583,7 +1583,7 @@ const BOOKS = [
     categories: ["PowerBuilder"],
   },
   {
-    _id: 145,
+    id: 145,
     title: "Azure in Action",
     isbn: "193518248X",
     pageCount: 425,
@@ -1601,7 +1601,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 146,
+    id: 146,
     title: "Distributed Agile in Action",
     isbn: "1935182412",
     pageCount: 325,
@@ -1616,7 +1616,7 @@ const BOOKS = [
     categories: ["Software Engineering"],
   },
   {
-    _id: 147,
+    id: 147,
     title: "Metaprogramming in .NET",
     isbn: "1617290262",
     pageCount: 0,
@@ -1630,7 +1630,7 @@ const BOOKS = [
     categories: ["Microsoft/.NET"],
   },
   {
-    _id: 148,
+    id: 148,
     title: "Portlets and Apache Portals",
     pageCount: 500,
     publishedDate: {
@@ -1653,7 +1653,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 149,
+    id: 149,
     title: "Code Generation in Action",
     isbn: "1930110979",
     pageCount: 350,
@@ -1671,7 +1671,7 @@ const BOOKS = [
     categories: ["Programming"],
   },
   {
-    _id: 150,
+    id: 150,
     title: "Illustrated Guide to HTTP",
     isbn: "138582262",
     pageCount: 400,
@@ -1687,7 +1687,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 152,
+    id: 152,
     title: "Agile ALM",
     isbn: "1935182633",
     pageCount: 0,
@@ -1705,7 +1705,7 @@ const BOOKS = [
     categories: ["Software Engineering"],
   },
   {
-    _id: 153,
+    id: 153,
     title: "Java Network Programming, Second Edition",
     isbn: "188477749X",
     pageCount: 860,
@@ -1721,7 +1721,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 154,
+    id: 154,
     title: "Struts in Action",
     isbn: "1932394249",
     pageCount: 672,
@@ -1742,7 +1742,7 @@ const BOOKS = [
     categories: ["Java", "Internet"],
   },
   {
-    _id: 155,
+    id: 155,
     title: "Camel in Action",
     isbn: "1935182366",
     pageCount: 375,
@@ -1760,7 +1760,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 156,
+    id: 156,
     title: "Taming Text",
     isbn: "193398838X",
     pageCount: 350,
@@ -1778,7 +1778,7 @@ const BOOKS = [
     categories: ["Software Engineering"],
   },
   {
-    _id: 158,
+    id: 158,
     title: "JBoss in Action",
     isbn: "1933988029",
     pageCount: 496,
@@ -1794,7 +1794,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 159,
+    id: 159,
     title: "Gnuplot in Action",
     isbn: "1933988398",
     pageCount: 400,
@@ -1810,7 +1810,7 @@ const BOOKS = [
     categories: ["Computer Graphics"],
   },
   {
-    _id: 160,
+    id: 160,
     title: "Extending and Embedding Perl",
     isbn: "1930110820",
     pageCount: 384,
@@ -1826,7 +1826,7 @@ const BOOKS = [
     categories: ["Perl"],
   },
   {
-    _id: 161,
+    id: 161,
     title: "iOS 4 in Action",
     isbn: "1617290017",
     pageCount: 504,
@@ -1850,7 +1850,7 @@ const BOOKS = [
     categories: ["Mobile Technology"],
   },
   {
-    _id: 162,
+    id: 162,
     title: "Elements of Programming with Perl",
     isbn: "1884777805",
     pageCount: 368,
@@ -1866,7 +1866,7 @@ const BOOKS = [
     categories: ["Perl"],
   },
   {
-    _id: 163,
+    id: 163,
     title: "Learn Windows PowerShell in a Month of Lunches",
     isbn: "1617290211",
     pageCount: 0,
@@ -1884,7 +1884,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 164,
+    id: 164,
     title: "R in Action",
     isbn: "1935182390",
     pageCount: 375,
@@ -1902,7 +1902,7 @@ const BOOKS = [
     categories: ["Software Engineering"],
   },
   {
-    _id: 165,
+    id: 165,
     title: "Android in Practice",
     isbn: "9781935182924",
     pageCount: 0,
@@ -1913,7 +1913,7 @@ const BOOKS = [
     categories: ["Mobile Technology"],
   },
   {
-    _id: 167,
+    id: 167,
     title: "SOA Security",
     isbn: "1932394680",
     pageCount: 512,
@@ -1929,7 +1929,7 @@ const BOOKS = [
     categories: ["Software Engineering"],
   },
   {
-    _id: 168,
+    id: 168,
     title: "Rails 3 in Action",
     isbn: "1935182277",
     pageCount: 425,
@@ -1947,7 +1947,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 169,
+    id: 169,
     title: "Continuous Integration in .NET",
     isbn: "1935182552",
     pageCount: 328,
@@ -1965,7 +1965,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 170,
+    id: 170,
     title: "Technology Paradise Lost",
     isbn: "1932394133",
     pageCount: 260,
@@ -1983,7 +1983,7 @@ const BOOKS = [
     categories: ["Business"],
   },
   {
-    _id: 172,
+    id: 172,
     title: "Kermit 95+",
     isbn: "1930110057",
     pageCount: 0,
@@ -1999,7 +1999,7 @@ const BOOKS = [
     categories: ["Internet", "Networking", "Miscella"],
   },
   {
-    _id: 173,
+    id: 173,
     title: "Laszlo in Action",
     isbn: "1932394834",
     pageCount: 552,
@@ -2015,7 +2015,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 174,
+    id: 174,
     title: "Groovy in Action",
     isbn: "1932394842",
     pageCount: 696,
@@ -2036,7 +2036,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 175,
+    id: 175,
     title: "Groovy in Action, Second Edition",
     isbn: "1935182447",
     pageCount: 700,
@@ -2060,7 +2060,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 176,
+    id: 176,
     title: "Object Technology Centers of Excellence",
     isbn: "132612313",
     pageCount: 200,
@@ -2078,7 +2078,7 @@ const BOOKS = [
     categories: ["Object-Technology Programming", ""],
   },
   {
-    _id: 177,
+    id: 177,
     title: "Test Driven",
     isbn: "1932394850",
     pageCount: 544,
@@ -2094,7 +2094,7 @@ const BOOKS = [
     categories: ["Software Engineering"],
   },
   {
-    _id: 178,
+    id: 178,
     title: "Effective Unit Testing",
     isbn: "1935182579",
     pageCount: 350,
@@ -2108,7 +2108,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 179,
+    id: 179,
     title: "Making Java Groovy",
     isbn: "1935182943",
     pageCount: 0,
@@ -2126,7 +2126,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 180,
+    id: 180,
     title: "The Awesome Power of Direct3D/DirectX",
     isbn: "1884777473",
     pageCount: 840,
@@ -2144,7 +2144,7 @@ const BOOKS = [
     categories: ["Computer Graphics"],
   },
   {
-    _id: 181,
+    id: 181,
     title: "Practical Software Requirements",
     isbn: "1884777597",
     pageCount: 448,
@@ -2160,7 +2160,7 @@ const BOOKS = [
     categories: ["Software Engineering", "Theory"],
   },
   {
-    _id: 182,
+    id: 182,
     title: "NHibernate in Action",
     isbn: "1932394923",
     pageCount: 400,
@@ -2182,7 +2182,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 183,
+    id: 183,
     title: "Microsoft Reporting Services in Action",
     isbn: "1932394222",
     pageCount: 656,
@@ -2198,7 +2198,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 184,
+    id: 184,
     title: "AspectJ in Action",
     isbn: "1930110936",
     pageCount: 512,
@@ -2214,7 +2214,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 185,
+    id: 185,
     title: "AspectJ in Action, Second Edition",
     isbn: "1933988053",
     pageCount: 568,
@@ -2232,7 +2232,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 186,
+    id: 186,
     title: "Hadoop in Action",
     isbn: "1935182196",
     pageCount: 325,
@@ -2250,7 +2250,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 187,
+    id: 187,
     title: "SQR in PeopleSoft and Other Applications",
     isbn: "1884777775",
     pageCount: 600,
@@ -2266,7 +2266,7 @@ const BOOKS = [
     categories: ["Business", "Client-Server"],
   },
   {
-    _id: 188,
+    id: 188,
     title: "SQR in PeopleSoft and Other Applications, Second Edition",
     isbn: "1932394001",
     pageCount: 696,
@@ -2282,7 +2282,7 @@ const BOOKS = [
     categories: ["Business", "Client-Server"],
   },
   {
-    _id: 189,
+    id: 189,
     title: "F# in Action",
     isbn: "1935182250",
     pageCount: 425,
@@ -2297,7 +2297,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 190,
+    id: 190,
     title: "Tuscany SCA in Action",
     isbn: "1933988894",
     pageCount: 472,
@@ -2321,7 +2321,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 192,
+    id: 192,
     title: "Client/Server Yellow Pages",
     isbn: "1884777082",
     pageCount: 280,
@@ -2339,7 +2339,7 @@ const BOOKS = [
     categories: ["Client-Server"],
   },
   {
-    _id: 193,
+    id: 193,
     title: "Object Oriented Application Frameworks",
     isbn: "1884777066",
     pageCount: 352,
@@ -2357,7 +2357,7 @@ const BOOKS = [
     categories: ["Object-Oriented Programming"],
   },
   {
-    _id: 194,
+    id: 194,
     title: "Tapestry in Action",
     isbn: "1932394117",
     pageCount: 580,
@@ -2373,7 +2373,7 @@ const BOOKS = [
     categories: ["Java", "Internet"],
   },
   {
-    _id: 195,
+    id: 195,
     title: "WebWork in Action",
     isbn: "1932394532",
     pageCount: 400,
@@ -2389,7 +2389,7 @@ const BOOKS = [
     categories: ["internet"],
   },
   {
-    _id: 196,
+    id: 196,
     title: "MacRuby in Action",
     isbn: "1935182498",
     pageCount: 0,
@@ -2403,7 +2403,7 @@ const BOOKS = [
     categories: ["Programming"],
   },
   {
-    _id: 197,
+    id: 197,
     title: "Erlang and OTP in Action",
     isbn: "1933988789",
     pageCount: 500,
@@ -2421,7 +2421,7 @@ const BOOKS = [
     categories: ["Programming"],
   },
   {
-    _id: 198,
+    id: 198,
     title: "SharePoint 2007 Developer's Guide to Business Data Catalog",
     isbn: "1933988819",
     pageCount: 304,
@@ -2439,7 +2439,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 199,
+    id: 199,
     title: "Doing IT Right",
     isbn: "133964256",
     pageCount: 350,
@@ -2457,7 +2457,7 @@ const BOOKS = [
     categories: ["Business", "Software Engineering"],
   },
   {
-    _id: 200,
+    id: 200,
     title: "Adobe AIR in Action",
     isbn: "1933988487",
     pageCount: 336,
@@ -2473,7 +2473,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 201,
+    id: 201,
     title: "Ant in Action",
     isbn: "193239480X",
     pageCount: 600,
@@ -2491,7 +2491,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 202,
+    id: 202,
     title: "Restlet in Action",
     isbn: "193518234X",
     pageCount: 450,
@@ -2509,7 +2509,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 203,
+    id: 203,
     title: "iText in Action",
     isbn: "1932394796",
     pageCount: 688,
@@ -2527,7 +2527,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 204,
+    id: 204,
     title: "iText in Action, Second Edition",
     isbn: "1935182617",
     pageCount: 600,
@@ -2545,7 +2545,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 205,
+    id: 205,
     title: "Power-3D",
     isbn: "138412146",
     pageCount: 550,
@@ -2561,7 +2561,7 @@ const BOOKS = [
     categories: ["Computer Graphics"],
   },
   {
-    _id: 206,
+    id: 206,
     title: "SNA and TCP/IP Enterprise Networking",
     isbn: "131271687",
     pageCount: 540,
@@ -2584,7 +2584,7 @@ const BOOKS = [
     categories: ["Software Engineering", "Theory"],
   },
   {
-    _id: 208,
+    id: 208,
     title: "Subversion in Action",
     isbn: "1932394478",
     pageCount: 356,
@@ -2602,7 +2602,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 209,
+    id: 209,
     title: "Minimal Perl",
     isbn: "1932394508",
     pageCount: 504,
@@ -2618,7 +2618,7 @@ const BOOKS = [
     categories: ["Perl"],
   },
   {
-    _id: 210,
+    id: 210,
     title: "Distributed Programming with Java",
     isbn: "1884777651",
     pageCount: 320,
@@ -2634,7 +2634,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 211,
+    id: 211,
     title: "Comprehensive Networking Glossary and Acronym Guide",
     isbn: "013319955X",
     pageCount: 208,
@@ -2652,7 +2652,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 212,
+    id: 212,
     title: "JavaServer Faces in Action",
     isbn: "1932394125",
     pageCount: 744,
@@ -2668,7 +2668,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 213,
+    id: 213,
     title: "LINQ in Action",
     isbn: "1933988169",
     pageCount: 576,
@@ -2684,7 +2684,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 214,
+    id: 214,
     title: "Internet BBSs",
     isbn: "132869985",
     pageCount: 400,
@@ -2702,7 +2702,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 215,
+    id: 215,
     title: "Algorithms of the Intelligent Web",
     isbn: "1933988665",
     pageCount: 368,
@@ -2718,7 +2718,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 216,
+    id: 216,
     title: "JUnit in Action",
     isbn: "1930110995",
     pageCount: 384,
@@ -2734,7 +2734,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 217,
+    id: 217,
     title: "Tika in Action",
     isbn: "1935182854",
     pageCount: 0,
@@ -2748,7 +2748,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 218,
+    id: 218,
     title: "Ruby in Practice",
     isbn: "1933988479",
     pageCount: 360,
@@ -2764,7 +2764,7 @@ const BOOKS = [
     categories: ["Programming"],
   },
   {
-    _id: 219,
+    id: 219,
     title: "Inside LotusScript",
     isbn: "1884777481",
     pageCount: 420,
@@ -2782,7 +2782,7 @@ const BOOKS = [
     categories: ["Business"],
   },
   {
-    _id: 220,
+    id: 220,
     title: "Maximum MIDI",
     isbn: "1884777449",
     pageCount: 450,
@@ -2798,7 +2798,7 @@ const BOOKS = [
     categories: ["Programming"],
   },
   {
-    _id: 221,
+    id: 221,
     title: "Planning and Managing ATM Networks",
     isbn: "132621894",
     pageCount: 320,
@@ -2816,7 +2816,7 @@ const BOOKS = [
     categories: ["Client-Server", "Networking"],
   },
   {
-    _id: 222,
+    id: 222,
     title: "Client/Server Applications on ATM Networks",
     isbn: "137353006",
     pageCount: 350,
@@ -2834,7 +2834,7 @@ const BOOKS = [
     categories: ["Client-Server", "Networking"],
   },
   {
-    _id: 223,
+    id: 223,
     title: "JavaFX in Action",
     isbn: "1933988991",
     pageCount: 373,
@@ -2850,7 +2850,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 224,
+    id: 224,
     title: "Entity Framework 4 in Action",
     isbn: "1935182188",
     pageCount: 576,
@@ -2868,7 +2868,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 225,
+    id: 225,
     title: "ASP.NET 2.0 Web Parts in Action",
     isbn: "193239477X",
     pageCount: 344,
@@ -2886,7 +2886,7 @@ const BOOKS = [
     categories: ["Microsoft"],
   },
   {
-    _id: 226,
+    id: 226,
     title: "Sass and Compass in Action",
     isbn: "1617290149",
     pageCount: 300,
@@ -2910,7 +2910,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 227,
+    id: 227,
     title: "Core OWL 5.0",
     isbn: "1884777503",
     pageCount: 500,
@@ -2928,7 +2928,7 @@ const BOOKS = [
     categories: ["Programming"],
   },
   {
-    _id: 228,
+    id: 228,
     title: "Advanced OWL 5.0",
     isbn: "1884777465",
     pageCount: 570,
@@ -2946,7 +2946,7 @@ const BOOKS = [
     categories: ["Programming"],
   },
   {
-    _id: 229,
+    id: 229,
     title: "Server-Based Java Programming",
     isbn: "1884777716",
     pageCount: 592,
@@ -2962,7 +2962,7 @@ const BOOKS = [
     categories: ["Java", "Client-Server", "Internet"],
   },
   {
-    _id: 230,
+    id: 230,
     title: "SQL Server MVP Deep Dives",
     isbn: "1935182048",
     pageCount: 848,
@@ -2989,7 +2989,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 231,
+    id: 231,
     title: "SQL Server MVP Deep Dives",
     isbn: "9781935182047",
     pageCount: 848,
@@ -3015,7 +3015,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 232,
+    id: 232,
     title: "SQL Server MVP Deep Dives",
     isbn: "9781935182047",
     pageCount: 848,
@@ -3037,7 +3037,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 233,
+    id: 233,
     title: "PostGIS in Action",
     isbn: "1935182269",
     pageCount: 325,
@@ -3055,7 +3055,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 235,
+    id: 235,
     title: "Programming Mac OS X",
     isbn: "1930110855",
     pageCount: 384,
@@ -3073,7 +3073,7 @@ const BOOKS = [
     categories: ["Programming"],
   },
   {
-    _id: 236,
+    id: 236,
     title: "The Art of Unit Testing",
     isbn: "1933988274",
     pageCount: 320,
@@ -3089,7 +3089,7 @@ const BOOKS = [
     categories: ["Software Engineering"],
   },
   {
-    _id: 237,
+    id: 237,
     title: "Mahout in Action",
     isbn: "1935182684",
     pageCount: 375,
@@ -3103,7 +3103,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 238,
+    id: 238,
     title: "ASP.NET MVC in Action",
     isbn: "1933988622",
     pageCount: 392,
@@ -3121,7 +3121,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 239,
+    id: 239,
     title: "ASP.NET MVC 2 in Action",
     isbn: "193518279X",
     pageCount: 432,
@@ -3146,7 +3146,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 240,
+    id: 240,
     title: "ASP.NET MVC 4 in Action",
     isbn: "1617290416",
     pageCount: 450,
@@ -3171,7 +3171,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 241,
+    id: 241,
     title: "EJB 3 in Action",
     isbn: "1933988347",
     pageCount: 712,
@@ -3187,7 +3187,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 242,
+    id: 242,
     title: "EJB 3 in Action, Second Edition",
     isbn: "1935182994",
     pageCount: 0,
@@ -3211,7 +3211,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 243,
+    id: 243,
     title: "Explorer's Guide to the Semantic Web",
     isbn: "1932394206",
     pageCount: 304,
@@ -3229,7 +3229,7 @@ const BOOKS = [
     categories: ["Internet", "Theory", "XML"],
   },
   {
-    _id: 244,
+    id: 244,
     title: "Practical LotusScript",
     isbn: "1884777767",
     pageCount: 512,
@@ -3245,7 +3245,7 @@ const BOOKS = [
     categories: ["Business"],
   },
   {
-    _id: 245,
+    id: 245,
     title: "Domino Development with Java",
     isbn: "1930110049",
     pageCount: 467,
@@ -3261,7 +3261,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 246,
+    id: 246,
     title: "Windows PowerShell in Action",
     isbn: "1932394907",
     pageCount: 576,
@@ -3279,7 +3279,7 @@ const BOOKS = [
     categories: ["Microsoft"],
   },
   {
-    _id: 247,
+    id: 247,
     title: "Windows PowerShell in Action, Second Edition",
     isbn: "1935182137",
     pageCount: 700,
@@ -3297,7 +3297,7 @@ const BOOKS = [
     categories: ["Microsoft"],
   },
   {
-    _id: 248,
+    id: 248,
     title: "Silverlight 4 in Action, Revised Edition",
     isbn: "1935182374",
     pageCount: 425,
@@ -3315,7 +3315,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 249,
+    id: 249,
     title: "Silverlight 5 in Action",
     isbn: "1617290319",
     pageCount: 925,
@@ -3329,7 +3329,7 @@ const BOOKS = [
     categories: ["Microsoft", ".NET"],
   },
   {
-    _id: 250,
+    id: 250,
     title: "Hibernate Quickly",
     isbn: "1932394419",
     pageCount: 456,
@@ -3347,7 +3347,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 251,
+    id: 251,
     title: "Generative Art",
     isbn: "1935182625",
     pageCount: 0,
@@ -3361,7 +3361,7 @@ const BOOKS = [
     categories: ["Algorithmic Art"],
   },
   {
-    _id: 252,
+    id: 252,
     title: "Windows Phone 7 in Action",
     isbn: "1617290092",
     pageCount: 0,
@@ -3379,7 +3379,7 @@ const BOOKS = [
     categories: ["Mobile Technology"],
   },
   {
-    _id: 253,
+    id: 253,
     title: "Lift in Action",
     isbn: "1935182803",
     pageCount: 450,
@@ -3393,7 +3393,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 254,
+    id: 254,
     title: "Web Development with Apache and Perl",
     isbn: "1930110065",
     pageCount: 424,
@@ -3409,7 +3409,7 @@ const BOOKS = [
     categories: ["Perl", "Client-Server"],
   },
   {
-    _id: 255,
+    id: 255,
     title: "Real-World Functional Programming",
     isbn: "1933988924",
     pageCount: 560,
@@ -3427,7 +3427,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 256,
+    id: 256,
     title: "Machine Learning in Action",
     isbn: "1617290181",
     pageCount: 0,
@@ -3445,7 +3445,7 @@ const BOOKS = [
     categories: ["Software Engineering"],
   },
   {
-    _id: 257,
+    id: 257,
     title: "Dependency Injection",
     isbn: "193398855X",
     pageCount: 352,
@@ -3463,7 +3463,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 258,
+    id: 258,
     title: "Understanding Enterprise SOA",
     isbn: "1932394591",
     pageCount: 280,
@@ -3481,7 +3481,7 @@ const BOOKS = [
     categories: ["Theory"],
   },
   {
-    _id: 259,
+    id: 259,
     title: "Open-Source ESBs in Action",
     isbn: "1933988215",
     pageCount: 528,
@@ -3497,7 +3497,7 @@ const BOOKS = [
     categories: ["Business"],
   },
   {
-    _id: 260,
+    id: 260,
     title: "Activiti in Action",
     isbn: "1617290122",
     pageCount: 0,
@@ -3511,7 +3511,7 @@ const BOOKS = [
     categories: ["Software Engineering"],
   },
   {
-    _id: 261,
+    id: 261,
     title: "DSLs in Boo: Domain-Specific Languages in .NET",
     isbn: "1933988606",
     pageCount: 352,
@@ -3529,7 +3529,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 262,
+    id: 262,
     title: "JUnit Recipes",
     isbn: "1932394230",
     pageCount: 752,
@@ -3545,7 +3545,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 263,
+    id: 263,
     title: "wxPython in Action",
     isbn: "1932394621",
     pageCount: 620,
@@ -3563,7 +3563,7 @@ const BOOKS = [
     categories: ["Python"],
   },
   {
-    _id: 264,
+    id: 264,
     title: "Clojure in Action",
     isbn: "1935182595",
     pageCount: 475,
@@ -3581,7 +3581,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 265,
+    id: 265,
     title: "Scala in Action",
     isbn: "1935182757",
     pageCount: 0,
@@ -3595,7 +3595,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 266,
+    id: 266,
     title: "Working with Objects",
     isbn: "134529308",
     pageCount: 420,
@@ -3613,7 +3613,7 @@ const BOOKS = [
     categories: ["Object-Oriented Programming"],
   },
   {
-    _id: 267,
+    id: 267,
     title: "PHP in Action",
     isbn: "1932394753",
     pageCount: 552,
@@ -3631,7 +3631,7 @@ const BOOKS = [
     categories: ["PHP"],
   },
   {
-    _id: 269,
+    id: 269,
     title: "Secrets of the JavaScript Ninja",
     isbn: "193398869X",
     pageCount: 300,
@@ -3649,7 +3649,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 270,
+    id: 270,
     title: "Microsoft Office Essentials",
     isbn: "132623129",
     pageCount: 480,
@@ -3667,7 +3667,7 @@ const BOOKS = [
     categories: ["Business"],
   },
   {
-    _id: 271,
+    id: 271,
     title: "Swing",
     isbn: "1884777848",
     pageCount: 0,
@@ -3679,7 +3679,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 272,
+    id: 272,
     title: "Swing Second Edition",
     isbn: "193011088X",
     pageCount: 912,
@@ -3695,7 +3695,7 @@ const BOOKS = [
     categories: ["Java", "Internet"],
   },
   {
-    _id: 273,
+    id: 273,
     title: "The Awesome Power of Java Beans",
     isbn: "1884777562",
     pageCount: 500,
@@ -3711,7 +3711,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 274,
+    id: 274,
     title: "Personal Videoconferencing",
     isbn: "013268327X",
     pageCount: 420,
@@ -3729,7 +3729,7 @@ const BOOKS = [
     categories: ["Networking"],
   },
   {
-    _id: 275,
+    id: 275,
     title: "The Cloud at Your Service",
     isbn: "1935182528",
     pageCount: 200,
@@ -3743,7 +3743,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 276,
+    id: 276,
     title: "Implementing Elliptic Curve Cryptography",
     isbn: "1884777694",
     pageCount: 330,
@@ -3761,7 +3761,7 @@ const BOOKS = [
     categories: ["Theory"],
   },
   {
-    _id: 277,
+    id: 277,
     title: "SOA Patterns",
     isbn: "1933988266",
     pageCount: 250,
@@ -3779,7 +3779,7 @@ const BOOKS = [
     categories: ["SOA"],
   },
   {
-    _id: 278,
+    id: 278,
     title: "Hello World!",
     isbn: "1933988495",
     pageCount: 432,
@@ -3797,7 +3797,7 @@ const BOOKS = [
     categories: ["Programming", "Python"],
   },
   {
-    _id: 279,
+    id: 279,
     title: "SCBCD Exam Study Kit",
     isbn: "1932394400",
     pageCount: 488,
@@ -3813,7 +3813,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 280,
+    id: 280,
     title: "Portlets in Action",
     isbn: "1935182544",
     pageCount: 475,
@@ -3831,7 +3831,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 281,
+    id: 281,
     title: "SWT/JFace in Action",
     isbn: "1932394273",
     pageCount: 496,
@@ -3855,7 +3855,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 282,
+    id: 282,
     title: "OpenCL in Action",
     isbn: "1617290173",
     pageCount: 0,
@@ -3869,7 +3869,7 @@ const BOOKS = [
     categories: ["Programming"],
   },
   {
-    _id: 283,
+    id: 283,
     title: "Multiprotocol over ATM",
     isbn: "138892709",
     pageCount: 341,
@@ -3887,7 +3887,7 @@ const BOOKS = [
     categories: ["Internet", "Networking"],
   },
   {
-    _id: 284,
+    id: 284,
     title: "Dependency Injection in .NET",
     isbn: "1935182501",
     pageCount: 375,
@@ -3905,7 +3905,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 285,
+    id: 285,
     title: "Java 3D Programming",
     isbn: "1930110359",
     pageCount: 400,
@@ -3921,7 +3921,7 @@ const BOOKS = [
     categories: ["Java", "Internet", "Computer Graph"],
   },
   {
-    _id: 286,
+    id: 286,
     title: "Liferay in Action",
     isbn: "193518282X",
     pageCount: 375,
@@ -3935,7 +3935,7 @@ const BOOKS = [
     categories: ["Internet"],
   },
   {
-    _id: 287,
+    id: 287,
     title: "JSP Tag Libraries",
     isbn: "193011009X",
     pageCount: 656,
@@ -3951,7 +3951,7 @@ const BOOKS = [
     categories: ["Java", "Internet"],
   },
   {
-    _id: 289,
+    id: 289,
     title: "Instant Messaging in Java",
     isbn: "1930110464",
     pageCount: 402,
@@ -3969,7 +3969,7 @@ const BOOKS = [
     categories: ["Internet", "Java"],
   },
   {
-    _id: 290,
+    id: 290,
     title: "Java Applets and Channels Without Programming",
     isbn: "1884777392",
     pageCount: 372,
@@ -3994,7 +3994,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 291,
+    id: 291,
     title: "PowerShell in Practice",
     isbn: "1935182005",
     pageCount: 500,
@@ -4012,7 +4012,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 292,
+    id: 292,
     title: "PowerShell and WMI",
     isbn: "1617290114",
     pageCount: 0,
@@ -4026,7 +4026,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 293,
+    id: 293,
     title: "Making Sense of Java",
     isbn: "132632942",
     pageCount: 180,
@@ -4051,7 +4051,7 @@ const BOOKS = [
     categories: ["Java", "Business"],
   },
   {
-    _id: 294,
+    id: 294,
     title: "C++/CLI in Action",
     isbn: "1932394818",
     pageCount: 416,
@@ -4069,7 +4069,7 @@ const BOOKS = [
     categories: ["Microsoft"],
   },
   {
-    _id: 295,
+    id: 295,
     title: "C# in Depth",
     isbn: "1933988363",
     pageCount: 424,
@@ -4085,7 +4085,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 296,
+    id: 296,
     title: "C# in Depth, Second Edition",
     isbn: "1935182471",
     pageCount: 584,
@@ -4100,7 +4100,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 297,
+    id: 297,
     title: "Magical A-Life Avatars",
     isbn: "1884777589",
     pageCount: 450,
@@ -4118,7 +4118,7 @@ const BOOKS = [
     categories: ["Internet", "Theory"],
   },
   {
-    _id: 298,
+    id: 298,
     title: "Becoming Agile",
     isbn: "1933988258",
     pageCount: 408,
@@ -4136,7 +4136,7 @@ const BOOKS = [
     categories: ["Software Engineering"],
   },
   {
-    _id: 299,
+    id: 299,
     title: "ActiveMQ in Action",
     isbn: "1933988940",
     pageCount: 408,
@@ -4154,7 +4154,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 300,
+    id: 300,
     title: "Implementing PeopleSoft Financials",
     isbn: "138411808",
     pageCount: 220,
@@ -4172,7 +4172,7 @@ const BOOKS = [
     categories: ["Business", "Client-Server"],
   },
   {
-    _id: 302,
+    id: 302,
     title: "SQL Server DMVs in Action",
     isbn: "1935182730",
     pageCount: 352,
@@ -4190,7 +4190,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 303,
+    id: 303,
     title: "Scala in Depth",
     isbn: "1935182706",
     pageCount: 0,
@@ -4208,7 +4208,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 304,
+    id: 304,
     title: "JMX in Action",
     isbn: "1930110561",
     pageCount: 424,
@@ -4224,7 +4224,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 305,
+    id: 305,
     title: "EJB Cookbook",
     isbn: "1930110944",
     pageCount: 352,
@@ -4242,7 +4242,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 306,
+    id: 306,
     title: "GWT in Action, Second Edition",
     isbn: "1935182846",
     pageCount: 0,
@@ -4262,7 +4262,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 307,
+    id: 307,
     title: "JUnit in Action, Second Edition",
     isbn: "1935182021",
     pageCount: 504,
@@ -4286,7 +4286,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 308,
+    id: 308,
     title: "Bitter Java",
     isbn: "193011043X",
     pageCount: 368,
@@ -4302,7 +4302,7 @@ const BOOKS = [
     categories: ["Java", "Business", "Client Server", ""],
   },
   {
-    _id: 309,
+    id: 309,
     title: "Bitter EJB",
     isbn: "1930110952",
     pageCount: 440,
@@ -4320,7 +4320,7 @@ const BOOKS = [
     categories: ["Java", "Internet"],
   },
   {
-    _id: 310,
+    id: 310,
     title: "Spring Batch in Action",
     isbn: "1935182951",
     pageCount: 0,
@@ -4339,7 +4339,7 @@ const BOOKS = [
     categories: ["In Action"],
   },
   {
-    _id: 312,
+    id: 312,
     title: "JDK 1.4 Tutorial",
     isbn: "1930110456",
     pageCount: 408,
@@ -4355,7 +4355,7 @@ const BOOKS = [
     categories: ["Java", "Internet"],
   },
   {
-    _id: 313,
+    id: 313,
     title: "iPhone and iPad in Action",
     isbn: "1935182587",
     pageCount: 450,
@@ -4378,7 +4378,7 @@ const BOOKS = [
     categories: ["Mobile Technology"],
   },
   {
-    _id: 314,
+    id: 314,
     title: "SQL Server 2005 Reporting Services in Action",
     isbn: "1932394761",
     pageCount: 600,
@@ -4394,7 +4394,7 @@ const BOOKS = [
     categories: ["Microsoft"],
   },
   {
-    _id: 315,
+    id: 315,
     title: "Ten Years of UserFriendly.Org",
     isbn: "1935182129",
     pageCount: 1096,
@@ -4412,7 +4412,7 @@ const BOOKS = [
     categories: ["Miscellaneous"],
   },
   {
-    _id: 316,
+    id: 316,
     title: "Graphics Programming with Perl",
     isbn: "1930110022",
     pageCount: 328,
@@ -4428,7 +4428,7 @@ const BOOKS = [
     categories: ["Computer Graphics", "Perl"],
   },
   {
-    _id: 317,
+    id: 317,
     title: "RabbitMQ in Action",
     isbn: "1935182978",
     pageCount: 0,
@@ -4442,7 +4442,7 @@ const BOOKS = [
     categories: ["Software Engineering"],
   },
   {
-    _id: 318,
+    id: 318,
     title: "XDoclet in Action",
     isbn: "1932394052",
     pageCount: 624,
@@ -4458,7 +4458,7 @@ const BOOKS = [
     categories: ["XML", "Java"],
   },
   {
-    _id: 319,
+    id: 319,
     title: "Spring in Action",
     isbn: "1932394354",
     pageCount: 472,
@@ -4476,7 +4476,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 320,
+    id: 320,
     title: "Spring in Action, Second Edition",
     isbn: "1933988134",
     pageCount: 768,
@@ -4492,7 +4492,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 321,
+    id: 321,
     title: "Spring in Action, Third Edition",
     isbn: "1935182358",
     pageCount: 424,
@@ -4510,7 +4510,7 @@ const BOOKS = [
     categories: ["Java"],
   },
   {
-    _id: 325,
+    id: 325,
     title: "Spring in Practice",
     isbn: "1935182056",
     pageCount: 600,
@@ -4528,7 +4528,7 @@ const BOOKS = [
     categories: ["Java", "Software Development"],
   },
   {
-    _id: 327,
+    id: 327,
     title: "Java 2 Micro Edition",
     isbn: "1930110332",
     pageCount: 504,
@@ -4544,7 +4544,7 @@ const BOOKS = [
     categories: ["Java", "Internet"],
   },
   {
-    _id: 328,
+    id: 328,
     title: "SharePoint 2010 Workflows in Action",
     isbn: "1935182714",
     pageCount: 360,
@@ -4562,7 +4562,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 329,
+    id: 329,
     title: "SharePoint 2010 Web Parts in Action",
     isbn: "1935182773",
     pageCount: 448,
@@ -4580,7 +4580,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 330,
+    id: 330,
     title: "C++ Concurrency in Action",
     isbn: "1933988770",
     pageCount: 325,
@@ -4598,7 +4598,7 @@ const BOOKS = [
     categories: ["Microsoft .NET"],
   },
   {
-    _id: 331,
+    id: 331,
     title: "Java Servlets by Example",
     isbn: "188477766X",
     pageCount: 550,
@@ -4614,7 +4614,7 @@ const BOOKS = [
     categories: ["Java", "Internet"],
   },
   {
-    _id: 332,
+    id: 332,
     title: "XML Programming with VB and ASP",
     isbn: "1884777872",
     pageCount: 320,
@@ -4630,7 +4630,7 @@ const BOOKS = [
     categories: ["XML", "Internet"],
   },
   {
-    _id: 334,
+    id: 334,
     title: "Oracle8i Database Administration",
     isbn: "1884777783",
     pageCount: 543,
@@ -4646,7 +4646,7 @@ const BOOKS = [
     categories: ["Client-Server", "Networking"],
   },
   {
-    _id: 335,
+    id: 335,
     title: "The Engaging Web",
     isbn: "9781935182078",
     pageCount: 325,
@@ -4661,7 +4661,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 512,
+    id: 512,
     title: "Enterprise OSGi In Action",
     isbn: "1617290130",
     pageCount: 0,
@@ -4672,7 +4672,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 513,
+    id: 513,
     title: "Ext JS in Action, Second Edition",
     isbn: "1617290327",
     pageCount: 0,
@@ -4686,7 +4686,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 514,
+    id: 514,
     title: "Android in Action, Third Edition",
     isbn: "1617290505",
     pageCount: 0,
@@ -4700,7 +4700,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 515,
+    id: 515,
     title: "Arduino in Action",
     isbn: "1617290246",
     pageCount: 300,
@@ -4718,7 +4718,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 516,
+    id: 516,
     title: "Node.js in Action",
     isbn: "1617290572",
     pageCount: 300,
@@ -4742,7 +4742,7 @@ const BOOKS = [
     categories: ["Web Development"],
   },
   {
-    _id: 517,
+    id: 517,
     title: "Third-Party JavaScript ",
     isbn: "1617290548",
     pageCount: 0,
@@ -4756,7 +4756,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 519,
+    id: 519,
     title: "Multimedia Computing",
     isbn: "020152029X",
     pageCount: 0,
@@ -4768,7 +4768,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 520,
+    id: 520,
     title: "Web Development with JavaServer Pages",
     isbn: "1884777996",
     pageCount: 0,
@@ -4780,7 +4780,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 521,
+    id: 521,
     title: "Up to Speed with Swing",
     isbn: "1884777643",
     pageCount: 0,
@@ -4792,7 +4792,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 522,
+    id: 522,
     title: "Manager's Guide to Open Source",
     isbn: "193239429X",
     pageCount: 0,
@@ -4804,7 +4804,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 523,
+    id: 523,
     title: "Programming Web Services with Java",
     isbn: "1930110421",
     pageCount: 0,
@@ -4816,7 +4816,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 525,
+    id: 525,
     title: "TCP/IP Programming for OS/2",
     isbn: "132612496",
     pageCount: 0,
@@ -4828,7 +4828,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 530,
+    id: 530,
     title: "Implementing SAP R/3, Second Edition",
     isbn: "013889213X",
     pageCount: 0,
@@ -4840,7 +4840,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 531,
+    id: 531,
     title: "Implementing SAP R/3",
     isbn: "1884777228",
     pageCount: 0,
@@ -4852,7 +4852,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 532,
+    id: 532,
     title: "Using C-Kermit: Communication Software",
     isbn: "1884777147",
     pageCount: 0,
@@ -4861,7 +4861,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 533,
+    id: 533,
     title: "SCWCD Exam Study Kit",
     isbn: "1930110596",
     pageCount: 0,
@@ -4873,7 +4873,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 549,
+    id: 549,
     title: "Unit Testing in C++",
     isbn: "1617290386",
     pageCount: 0,
@@ -4882,7 +4882,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 550,
+    id: 550,
     title: "Big Data",
     isbn: "1617290343",
     pageCount: 0,
@@ -4893,7 +4893,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 551,
+    id: 551,
     title: "CoffeeScript in Action",
     isbn: "1617290629",
     pageCount: 0,
@@ -4907,7 +4907,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 559,
+    id: 559,
     title: "SQL Server MVP Deep Dives, Volume 2",
     isbn: "1617290475",
     pageCount: 750,
@@ -4930,7 +4930,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 560,
+    id: 560,
     title: "HTML5 in Action",
     isbn: "1617290491",
     pageCount: 375,
@@ -4948,7 +4948,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 562,
+    id: 562,
     title: "Java Persistence with Hibernate, Second Edition",
     isbn: "1617290459",
     pageCount: 0,
@@ -4959,7 +4959,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 566,
+    id: 566,
     title: "Hadoop in Practice",
     isbn: "1617290238",
     pageCount: 0,
@@ -4973,7 +4973,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 569,
+    id: 569,
     title: "HBase in Action",
     isbn: "1617290521",
     pageCount: 0,
@@ -4987,7 +4987,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 571,
+    id: 571,
     title: "Flex Mobile in Action",
     isbn: "1617290610",
     pageCount: 0,
@@ -5001,7 +5001,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 577,
+    id: 577,
     title: "HTML5 for .NET Developers",
     isbn: "1617290432",
     pageCount: 0,
@@ -5015,7 +5015,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 580,
+    id: 580,
     title: "50 Android Hacks",
     isbn: "1617290564",
     pageCount: 0,
@@ -5029,7 +5029,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 591,
+    id: 591,
     title: "PowerShell in Depth",
     isbn: "1617290556",
     pageCount: 0,
@@ -5043,7 +5043,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 599,
+    id: 599,
     title: "Augmented Reality Revealed",
     isbn: "1617290165",
     pageCount: 0,
@@ -5052,7 +5052,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 607,
+    id: 607,
     title: "Building Well-Structured JavaScript Applications",
     isbn: "1617290599",
     pageCount: 0,
@@ -5061,7 +5061,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 611,
+    id: 611,
     title: "Linked Data",
     isbn: "1617290394",
     pageCount: 0,
@@ -5080,7 +5080,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 620,
+    id: 620,
     title: "Mule in Action, Second Edition",
     isbn: "1617290823",
     pageCount: 0,
@@ -5094,7 +5094,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 624,
+    id: 624,
     title: "Single Page Web Applications",
     isbn: "1617290750",
     pageCount: 0,
@@ -5108,7 +5108,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 628,
+    id: 628,
     title: "The Art of Unit Testing, Second Edition",
     isbn: "1617290890",
     pageCount: 0,
@@ -5122,7 +5122,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 629,
+    id: 629,
     title: "Play for Java",
     isbn: "1617290904",
     pageCount: 0,
@@ -5136,7 +5136,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 631,
+    id: 631,
     title: "Hello World! Second Edition",
     isbn: "1617290920",
     pageCount: 0,
@@ -5150,7 +5150,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 632,
+    id: 632,
     title: "Dart in Action",
     isbn: "1617290866",
     pageCount: 0,
@@ -5164,7 +5164,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 634,
+    id: 634,
     title: "Redis in Action",
     isbn: "1617290858",
     pageCount: 0,
@@ -5178,7 +5178,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 636,
+    id: 636,
     title: "Using the TI-83 Plus/TI-84 Plus",
     isbn: "161729084X",
     pageCount: 0,
@@ -5192,7 +5192,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 637,
+    id: 637,
     title: "Neo4j in Action",
     isbn: "1617290769",
     pageCount: 0,
@@ -5203,7 +5203,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 639,
+    id: 639,
     title: "Programming the TI-83 Plus/TI-84 Plus",
     isbn: "1617290777",
     pageCount: 0,
@@ -5217,7 +5217,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 640,
+    id: 640,
     title: "Functional Programming in Scala",
     isbn: "1617290653",
     pageCount: 0,
@@ -5228,7 +5228,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 641,
+    id: 641,
     title: "Play for Scala",
     isbn: "1617290793",
     pageCount: 0,
@@ -5242,7 +5242,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 642,
+    id: 642,
     title: "Node.js in Practice",
     isbn: "1617290939",
     pageCount: 0,
@@ -5253,7 +5253,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 643,
+    id: 643,
     title: "SonarQube in Action",
     isbn: "1617290955",
     pageCount: 0,
@@ -5267,7 +5267,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 644,
+    id: 644,
     title: "Windows Store App Development: C# and XAML",
     isbn: "1617290947",
     pageCount: 0,
@@ -5281,7 +5281,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 645,
+    id: 645,
     title: "Learn Windows IIS in a Month of Lunches",
     isbn: "1617290971",
     pageCount: 0,
@@ -5295,7 +5295,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 646,
+    id: 646,
     title: "Mondrian in Action",
     isbn: "161729098X",
     pageCount: 0,
@@ -5306,7 +5306,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 648,
+    id: 648,
     title: "RabbitMQ in Depth",
     isbn: "1617291005",
     pageCount: 0,
@@ -5317,7 +5317,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 649,
+    id: 649,
     title: "Akka in Action",
     isbn: "1617291013",
     pageCount: 0,
@@ -5333,7 +5333,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 650,
+    id: 650,
     title: "Extending jQuery",
     isbn: "161729103X",
     pageCount: 0,
@@ -5347,7 +5347,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 651,
+    id: 651,
     title: "OCA Java SE 7 Programmer I Certification Guide",
     isbn: "1617291048",
     pageCount: 0,
@@ -5361,7 +5361,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 652,
+    id: 652,
     title: "Kanban in Action",
     isbn: "1617291056",
     pageCount: 0,
@@ -5375,7 +5375,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 653,
+    id: 653,
     title: "Solr in Action",
     isbn: "1617291021",
     pageCount: 0,
@@ -5389,7 +5389,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 655,
+    id: 655,
     title: "Making Sense of NoSQL",
     isbn: "1617291072",
     pageCount: 0,
@@ -5403,7 +5403,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 656,
+    id: 656,
     title: "Jaguar Development with PowerBuilder 7",
     isbn: "1884777864",
     pageCount: 0,
@@ -5415,7 +5415,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 657,
+    id: 657,
     title: "Grails in Action, Second Edition",
     isbn: "1617290963",
     pageCount: 0,
@@ -5426,7 +5426,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 658,
+    id: 658,
     title: "Rails 4 in Action",
     isbn: "1617291099",
     pageCount: 0,
@@ -5437,7 +5437,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 659,
+    id: 659,
     title: "Learn Windows PowerShell in a Month of Lunches, Second Edition",
     isbn: "1617291080",
     pageCount: 0,
@@ -5451,7 +5451,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 662,
+    id: 662,
     title: "AOP in .NET",
     isbn: "1617291145",
     pageCount: 0,
@@ -5465,7 +5465,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 663,
+    id: 663,
     title: "Learn PowerShell Toolmaking in a Month of Lunches",
     isbn: "1617291161",
     pageCount: 0,
@@ -5479,7 +5479,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 664,
+    id: 664,
     title: "CMIS and Apache Chemistry in Action",
     isbn: "1617291153",
     pageCount: 0,
@@ -5490,7 +5490,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 667,
+    id: 667,
     title: "Action Guide (aka VB .NET)",
     isbn: "1930110324",
     pageCount: 0,
@@ -5499,7 +5499,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 670,
+    id: 670,
     title: "Learn Active Directory Management in a Month of Lunches",
     isbn: "1617291196",
     pageCount: 0,
@@ -5510,7 +5510,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 671,
+    id: 671,
     title: "Spring in Action, Fourth Edition",
     isbn: "161729120X",
     pageCount: 0,
@@ -5521,7 +5521,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 672,
+    id: 672,
     title: "The Mikado Method",
     isbn: "1617291218",
     pageCount: 0,
@@ -5535,7 +5535,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 676,
+    id: 676,
     title: "The Responsive Web",
     isbn: "1617291242",
     pageCount: 0,
@@ -5546,7 +5546,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 677,
+    id: 677,
     title: "Fast ASP.NET Websites",
     isbn: "1617291250",
     pageCount: 0,
@@ -5560,7 +5560,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 678,
+    id: 678,
     title: "SBT in Action",
     isbn: "1617291277",
     pageCount: 0,
@@ -5571,7 +5571,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 679,
+    id: 679,
     title: "PowerShell Deep Dives",
     isbn: "1617291315",
     pageCount: 0,
@@ -5588,7 +5588,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 680,
+    id: 680,
     title: "Gradle in Action",
     isbn: "1617291307",
     pageCount: 0,
@@ -5602,7 +5602,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 681,
+    id: 681,
     title: "Scalatra in Action",
     isbn: "1617291293",
     pageCount: 0,
@@ -5620,7 +5620,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 683,
+    id: 683,
     title: "AngularJS in Action",
     isbn: "1617291331",
     pageCount: 0,
@@ -5631,7 +5631,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 684,
+    id: 684,
     title: "Software Development Metrics",
     isbn: "1617291358",
     pageCount: 0,
@@ -5642,7 +5642,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 685,
+    id: 685,
     title: "F# Deep Dives",
     isbn: "1617291323",
     pageCount: 0,
@@ -5653,7 +5653,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 686,
+    id: 686,
     title: "C# in Depth, Third Edition",
     isbn: "161729134X",
     pageCount: 0,
@@ -5667,7 +5667,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 688,
+    id: 688,
     title: "PostGIS in Action, Second Edition",
     isbn: "1617291390",
     pageCount: 0,
@@ -5678,7 +5678,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 689,
+    id: 689,
     title: "R in Action, Second Edition",
     isbn: "1617291382",
     pageCount: 0,
@@ -5689,7 +5689,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 691,
+    id: 691,
     title: "The Joy of Clojure, Second Edition",
     isbn: "1617291412",
     pageCount: 0,
@@ -5703,7 +5703,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 692,
+    id: 692,
     title: "iOS 7 in Action",
     isbn: "1617291420",
     pageCount: 0,
@@ -5717,7 +5717,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 693,
+    id: 693,
     title: "Hello App Inventor!",
     isbn: "1617291439",
     pageCount: 0,
@@ -5728,7 +5728,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 696,
+    id: 696,
     title: "Ember.js in Action",
     isbn: "1617291455",
     pageCount: 0,
@@ -5742,7 +5742,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 697,
+    id: 697,
     title: "Netty in Action",
     isbn: "1617291471",
     pageCount: 0,
@@ -5753,7 +5753,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 699,
+    id: 699,
     title: "RavenDB in Action",
     isbn: "1617291501",
     pageCount: 0,
@@ -5764,7 +5764,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 700,
+    id: 700,
     title: "OCP Java SE 7 Programmer II Certification Guide",
     isbn: "161729148X",
     pageCount: 0,
@@ -5775,7 +5775,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 702,
+    id: 702,
     title: "Backbone.js in Action",
     isbn: "1617291536",
     pageCount: 0,
@@ -5786,7 +5786,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 703,
+    id: 703,
     title: "Clojure in Action, Second Edition",
     isbn: "1617291528",
     pageCount: 0,
@@ -5797,7 +5797,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 706,
+    id: 706,
     title: "Practical Data Science with R",
     isbn: "1617291560",
     pageCount: 0,
@@ -5811,7 +5811,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 707,
+    id: 707,
     title: "Secrets of the JavaScript Ninja pBook upgrade",
     pageCount: 0,
     status: "PUBLISH",
@@ -5819,7 +5819,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 711,
+    id: 711,
     title: "ArcGIS Web Development",
     isbn: "1617291617",
     pageCount: 0,
@@ -5830,7 +5830,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 712,
+    id: 712,
     title: "Elasticsearch in Action",
     isbn: "1617291625",
     pageCount: 0,
@@ -5841,7 +5841,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 716,
+    id: 716,
     title: "Learn SCCM 2012 in a Month of Lunches",
     isbn: "1617291684",
     pageCount: 0,
@@ -5852,7 +5852,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 717,
+    id: 717,
     title: "Programming for Musicians and Digital Artists",
     isbn: "1617291706",
     pageCount: 0,
@@ -5863,7 +5863,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 719,
+    id: 719,
     title: "BDD in Action",
     isbn: "161729165X",
     pageCount: 0,
@@ -5874,7 +5874,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 723,
+    id: 723,
     title: "Windows Phone 8 in Action",
     isbn: "1617291374",
     pageCount: 0,
@@ -5893,7 +5893,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 724,
+    id: 724,
     title: "Titanium Alloy in Action",
     isbn: "1617291749",
     pageCount: 0,
@@ -5904,7 +5904,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 727,
+    id: 727,
     title: "Giraph in Action",
     isbn: "1617291757",
     pageCount: 0,
@@ -5920,7 +5920,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 728,
+    id: 728,
     title: "The Well-Grounded Rubyist, Second Edition",
     isbn: "1617291692",
     pageCount: 0,
@@ -5934,7 +5934,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 729,
+    id: 729,
     title: "Go in Action",
     isbn: "1617291781",
     pageCount: 0,
@@ -5945,7 +5945,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 731,
+    id: 731,
     title: "The Programmer's Guide to Apache Thrift ",
     isbn: "1617291811",
     pageCount: 0,
@@ -5956,7 +5956,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 732,
+    id: 732,
     title: "Grokking Functional Programming",
     isbn: "1617291838",
     pageCount: 0,
@@ -5967,7 +5967,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 733,
+    id: 733,
     title: "CORS in Action",
     isbn: "161729182X",
     pageCount: 0,
@@ -5978,7 +5978,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 736,
+    id: 736,
     title: "Reactive Design Patterns",
     isbn: "1617291803",
     pageCount: 0,
@@ -5989,7 +5989,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 740,
+    id: 740,
     title: "Storm Applied",
     isbn: "1617291897",
     pageCount: 0,
@@ -6000,7 +6000,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 743,
+    id: 743,
     title: "Real-World Machine Learning",
     isbn: "1617291927",
     pageCount: 0,
@@ -6011,7 +6011,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 744,
+    id: 744,
     title: "jQuery UI in Action",
     isbn: "1617291935",
     pageCount: 0,
@@ -6022,7 +6022,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 746,
+    id: 746,
     title: "Web Components in Action",
     isbn: "1617291943",
     pageCount: 0,
@@ -6033,7 +6033,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 748,
+    id: 748,
     title: "JavaScript Application Design",
     isbn: "1617291951",
     pageCount: 0,
@@ -6044,7 +6044,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 749,
+    id: 749,
     title: "Git in Practice",
     isbn: "1617291978",
     pageCount: 0,
@@ -6055,7 +6055,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 750,
+    id: 750,
     title: "Impala in Action",
     isbn: "1617291986",
     pageCount: 0,
@@ -6066,7 +6066,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 751,
+    id: 751,
     title: "Java 8 in Action",
     isbn: "1617291994",
     pageCount: 0,
@@ -6077,7 +6077,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 753,
+    id: 753,
     title: "Elixir in Action",
     isbn: "161729201X",
     pageCount: 0,
@@ -6088,7 +6088,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 755,
+    id: 755,
     title: "MongoDB in Action, Second Edition",
     isbn: "1617291609",
     pageCount: 0,
@@ -6106,7 +6106,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 757,
+    id: 757,
     title: "Getting MEAN with Mongo, Express, Angular, and Node",
     isbn: "1617292036",
     pageCount: 0,
@@ -6117,7 +6117,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 761,
+    id: 761,
     title: "jQuery in Action, Third Edition",
     isbn: "1617292079",
     pageCount: 0,
@@ -6128,7 +6128,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 764,
+    id: 764,
     title: "D3.js in Action",
     isbn: "1617292117",
     pageCount: 0,
@@ -6139,7 +6139,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 765,
+    id: 765,
     title: "Learn SQL Server Administration in a Month of Lunches",
     isbn: "1617292133",
     pageCount: 0,
@@ -6153,7 +6153,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 766,
+    id: 766,
     title: "Geoprocessing with Python",
     isbn: "1617292141",
     pageCount: 0,
@@ -6164,7 +6164,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 767,
+    id: 767,
     title: "Barcodes with iOS",
     isbn: "161729215X",
     pageCount: 0,
@@ -6175,7 +6175,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 771,
+    id: 771,
     title: "Chef in Action",
     isbn: "1617292214",
     pageCount: 0,
@@ -6186,7 +6186,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 772,
+    id: 772,
     title: "Hadoop in Practice, Second Edition",
     isbn: "1617292222",
     pageCount: 0,
@@ -6197,7 +6197,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 774,
+    id: 774,
     title: "Oculus Rift in Action",
     isbn: "1617292192",
     pageCount: 0,
@@ -6208,7 +6208,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 776,
+    id: 776,
     title: "OpenStack in Action",
     isbn: "1617292168",
     pageCount: 0,
@@ -6219,7 +6219,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 777,
+    id: 777,
     title: "PowerShell in Depth, Second Edition",
     isbn: "1617292184",
     pageCount: 0,
@@ -6230,7 +6230,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 785,
+    id: 785,
     title: "Practical Probabilistic Programming",
     isbn: "1617292338",
     pageCount: 0,
@@ -6241,7 +6241,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 786,
+    id: 786,
     title: "Unity in Action",
     isbn: "161729232X",
     pageCount: 0,
@@ -6252,7 +6252,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 794,
+    id: 794,
     title: "Express.js in Action",
     isbn: "1617292427",
     pageCount: 0,
@@ -6263,7 +6263,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 795,
+    id: 795,
     title: "Learn Git in a Month of Lunches",
     isbn: "1617292419",
     pageCount: 0,
@@ -6274,7 +6274,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: 796,
+    id: 796,
     title: "Understanding SPAs",
     isbn: "1617292435",
     pageCount: 0,
@@ -6285,7 +6285,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06ad9d",
     },
     title: "XSLT Quickly",
@@ -6303,7 +6303,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06ad9e",
     },
     title: "Windows Forms Programming with C#",
@@ -6321,7 +6321,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06ad9f",
     },
     title: "Windows Forms in Action",
@@ -6339,7 +6339,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06ada0",
     },
     title: "Event Processing in Action",
@@ -6359,7 +6359,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06ada1",
     },
     title: "The Well-Grounded Java Developer",
@@ -6379,7 +6379,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06ada2",
     },
     title: "Objective-C Fundamentals",
@@ -6399,7 +6399,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06ada3",
     },
     title: "ADO.NET Programming",
@@ -6419,7 +6419,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06ada4",
     },
     title: "WPF in Action with Visual Studio 2008",
@@ -6437,7 +6437,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06ada5",
     },
     title: "Location-Aware Applications",
@@ -6453,7 +6453,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06ada6",
     },
     title: "Web Development with JavaServer Pages, Second Edition",
@@ -6471,7 +6471,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06ada7",
     },
     title: "IntelliJ IDEA in Action",
@@ -6491,7 +6491,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06ada8",
     },
     title: "Spring Integration in Action",
@@ -6511,7 +6511,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06ada9",
     },
     title: "The Joy of Clojure",
@@ -6531,7 +6531,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adaa",
     },
     title: "Dynamic WAP Application Development",
@@ -6549,7 +6549,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adab",
     },
     title: "IronPython in Action",
@@ -6567,7 +6567,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adac",
     },
     title: "Art of Java Web Development",
@@ -6585,7 +6585,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adad",
     },
     title: "Java Reflection in Action",
@@ -6603,7 +6603,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adae",
     },
     title: "Programming Windows Server 2003",
@@ -6621,7 +6621,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adaf",
     },
     title: "Struts Recipes",
@@ -6639,7 +6639,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adb0",
     },
     title: "Hello! iOS Development",
@@ -6655,7 +6655,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adb1",
     },
     title: "Jess in Action",
@@ -6675,7 +6675,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adb2",
     },
     title: "Remote LAN Access",
@@ -6695,7 +6695,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adb3",
     },
     title: "J2EE and XML Development",
@@ -6713,7 +6713,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adb4",
     },
     title: "Eclipse in Action",
@@ -6733,7 +6733,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adb5",
     },
     title: "ASP.NET AJAX in Action",
@@ -6751,7 +6751,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adb6",
     },
     title: "Ext JS in Action",
@@ -6771,7 +6771,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adb7",
     },
     title: "Sencha Touch in Action",
@@ -6791,7 +6791,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adb8",
     },
     title: "DSLs in Action",
@@ -6811,7 +6811,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adb9",
     },
     title: "Database Programming for Handheld Devices",
@@ -6827,7 +6827,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adba",
     },
     title: "Jakarta Commons Online Bookshelf",
@@ -6845,7 +6845,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adbb",
     },
     title: "Browsing with HttpClient",
@@ -6863,7 +6863,7 @@ const BOOKS = [
     categories: [],
   },
   {
-    _id: {
+    id: {
       $oid: "53c2ae8528d75d572c06adbc",
     },
     title: "Codec: Encoders and Decoders",
