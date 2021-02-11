@@ -32,3 +32,12 @@
 {"message":"Request processed successfully!","level":"info"}
 {"message":"New book with id 49672da4-3bb5-41fb-b738-eaf5fe22cc31 created successfully!","level":"info"}
 {"message":"Request processed successfully!","level":"info"}
+{"message":"User with b8eca75e-474f-45fe-a96a-588aecdce117 not found.","level":"error"}
+{"message":"The field 'name' is required.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"New book with id b51c6069-c8ef-454e-9c12-1644e8d74b57 created successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"User with 91951002-eecb-4be0-a072-9ecb2fb74132 not found.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"The field 'categories' must be a array.","level":"error"}

@@ -153,6 +153,18 @@ app.post("/api/users/:userId/books", (req, res) => {
     }
   }
 
+  // validate if the field is not a string
+  for (const query of ["authors", "categories"]) {
+    if (!Array.isArray(req.body[query])) {
+      logger.error(`The field '${query}' must be a array.`);
+      return res
+        .status(400)
+        .send(
+          `The field '${query}' is incorrectly formatted. Please try again.`
+        );
+    }
+  }
+
   // find the user with specific id and find index of specific book with bookId
   const user = USERS.find((user) => user.id == userId);
   // validate if no user with that id is found
@@ -177,7 +189,7 @@ app.post("/api/users/:userId/books", (req, res) => {
     shortDescription,
     longDescription: "",
     status: "",
-    authors,
+    authors: [authors],
     categories,
   };
 
