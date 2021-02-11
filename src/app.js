@@ -9,6 +9,7 @@ const { NODE_ENV, PORT, CLIENT_ORIGIN } = require("./config");
 const errorHandler = require("./errorHandler");
 const router = require("./router");
 const logger = require("./logger");
+const uuid = require("uuid").v4;
 const DATA = require("./dummyStore");
 const USERS = require("./userStore");
 
@@ -81,9 +82,28 @@ app.get("/api/users", (req, res) => {
 
 // post a single user to the list of users on the server
 app.post("/api/users", (req, res) => {
-  res.send(
-    "This endpoint adds/posts a single user's information to the server."
-  );
+  // use object destructuring for the request body
+  const { id, name, email, password } = req.body;
+
+  // validate if any field in the object is empty
+  for (const query of ["id", "name", "email", "password"]) {
+    if (!req.body[query]) {
+      logger.error(`${query} is required.`);
+      return res.status(400).send(`${query} is required. Please try again.`);
+    }
+  }
+
+  // create a new object to push to the store based on req body after validation
+  const user = { id: uuid(), name, email, password };
+
+  // push the newly created object to the store
+
+  USERS.push(user);
+
+  logger.info(`New user with id ${id} created successfully!`);
+
+  // return the appropriate status code and end()
+  res.status(201).json(user).send("New user created successfully!");
 });
 
 // gets the user info for one specific user
