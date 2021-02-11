@@ -1,4 +1,4 @@
-[
+const BOOKS = [
   {
     _id: 1,
     title: "Unlocking Android",
@@ -6879,3 +6879,5 @@
     categories: [],
   },
 ];
+
+module.exports = BOOKS;

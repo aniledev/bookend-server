@@ -10,7 +10,7 @@ const errorHandler = require("./errorHandler");
 const userRouter = require("./userRouter");
 const logger = require("./logger");
 const uuid = require("uuid").v4;
-const DATA = require("./dummyStore");
+const BOOKS = require("./codeDummyData");
 const USERS = require("./userStore");
 const isEmail = require("email-validator");
 const passwordValidator = require("password-validator");
@@ -41,8 +41,30 @@ app.use("/api/users", userRouter);
 
 // get dummy data book list from the server
 app.get("/api/results", (req, res) => {
-  // use validation to send back a filtered list based on req.body
-  res.send("This endpoint returns all books from server.");
+  // declare a variable for the response
+  let response = BOOKS;
+
+  // destructure the request object to get the query
+  const { title = "" } = req.query;
+
+  // create a filtered list where the request query matches the store data
+  if (title) {
+    if (title.length < 3) {
+      return res
+        .status(400)
+        .send("Title much be greater than 3 characters. Please try again.");
+    } else {
+      response = BOOKS.filter((book) =>
+        book["title"].toLowerCase().includes(title.toLowerCase())
+      );
+    }
+  }
+
+  if (response.length < 1 || response == undefined) {
+    return res.status(200).send("No matches found. Please try again.");
+  }
+
+  res.status(200).send(response);
 });
 
 // get one individual book result from the server
