@@ -50,6 +50,9 @@ app.get("/api/results", (req, res) => {
   // create a filtered list where the request query matches the store data
   if (title) {
     if (title.length < 3) {
+      logger.error(
+        `Invalid query input for title: ${title}. Character length not satisfied.`
+      );
       return res
         .status(400)
         .send("Title much be greater than 3 characters. Please try again.");
@@ -61,9 +64,11 @@ app.get("/api/results", (req, res) => {
   }
 
   if (response.length < 1 || response == undefined) {
+    logger.error(`Invalid query for ${title}. No matches found.`);
     return res.status(200).send("No matches found. Please try again.");
   }
 
+  logger.info("Request successfully processed.");
   res.status(200).send(response);
 });
 
@@ -92,7 +97,6 @@ app.delete("/api/users/:userId/books/:bookId", (req, res) => {
     "This endpoint deletes a book from the user's personalized list on the server."
   );
 });
-
 
 // post a single user to the list of users on the server
 app.post("/api/users", (req, res) => {
