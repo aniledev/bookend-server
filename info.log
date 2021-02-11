@@ -1,0 +1,8 @@
+{"message":"Invalid email 'llimapedro32j@666866mmom' entered.","level":"error"}
+{"message":"Invalid password 'MANIFESTING1' entered. The following rules failed: lowercase","level":"error"}
+{"message":"Invalid password 'manifesting1' entered. The following rules failed: uppercase","level":"error"}
+{"message":"Invalid password 'manifesting' entered. The following rules failed: uppercase,digits","level":"error"}
+{"message":"Invalid password 'MANIFESTINNG' entered. The following rules failed: lowercase,digits","level":"error"}
+{"message":"Invalid email 'l' entered.","level":"error"}
+{"message":"Invalid password 'Ma' entered. The following rules failed: min,digits","level":"error"}
+{"message":"Invalid password 'Ma' entered. The following rules failed: min,digits","level":"error"}

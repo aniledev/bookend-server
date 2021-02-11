@@ -126,7 +126,7 @@ app.post("/api/users", (req, res) => {
       return res
         .status(400)
         .send(
-          `The field '${query}' is incorrectly formatted and must be a string. Please try again.`
+          `The field '${query}' is incorrectly formatted. Please try again.`
         );
     }
   }
@@ -160,10 +160,7 @@ app.post("/api/users", (req, res) => {
   if (email.length < 3 || email.length > 320) {
     return res.status(400).send("Email must be between 3 and 320 characters.");
   }
-  // validate if the password  field is not the correct length
-  if (password.length < 8) {
-    return res.status(400).send("Password must be greater than 8 characters.");
-  }
+  
 
   // create a new object to push to the store based on req body after validation
   const user = { id: uuid(), name, email, password };
