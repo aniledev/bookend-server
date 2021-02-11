@@ -74,6 +74,7 @@ app.get("/api/users", (req, res) => {
 
   // user does not input email
   if (!email) {
+    logger.info("Request processed successfully!");
     return res.json(response);
   }
   // email address format is wrong
@@ -85,9 +86,11 @@ app.get("/api/users", (req, res) => {
   }
   // the email entered isn't found
   if (USERS.filter((user) => user.email == email).length === 0) {
+    logger.error(`Email '${email}' not  found.`);
     return res.status(400).send("Email not found. Please try again.");
   } else {
     // email passes validation
+    logger.info("Request processed successfully!");
     response = USERS.filter((user) => user.email == email);
     return res.json(response);
   }
