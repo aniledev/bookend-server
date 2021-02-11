@@ -39,23 +39,6 @@ app.use(express.json());
 app.use("/api/users", userRouter);
 app.use("/api/results", resultRouter);
 
-/*
-// get one individual book result from the server
-app.get("/api/results/:resultId", (req, res) => {
-  const { resultId } = req.params;
-
-  const book = BOOKS.find((book) => book.id == resultId);
-  // validate book
-  if (!book) {
-    logger.error(`User with ${userId} not found.`);
-    return res.status(400).send("User not found. Please try again.");
-  }
-  logger.info("Result processed successfully.");
-  res.status(200).json(book);
-});
-
-*/
-
 // get personalized list of books for a specific user
 app.get("/api/users/:userId/books", (req, res) => {
   // access the request object
@@ -211,6 +194,7 @@ app.delete("/api/users/:userId/books/:bookId", (req, res) => {
   res.status(204).end();
 });
 
+/*
 // post a single user to the list of users on the server
 app.post("/api/users", (req, res) => {
   // use object destructuring for the request body
@@ -280,6 +264,7 @@ app.post("/api/users", (req, res) => {
   // return the appropriate status code and end()
   return res.status(200).send("New user created!");
 });
+*/
 
 // gets the user info for one specific user
 app.get("/api/users/:userId", (req, res) => {

@@ -18,39 +18,116 @@ const schema = new passwordValidator();
 const userRouter = express.Router();
 schema.is().min(8).has().uppercase(1).has().lowercase(1).has().digits(1);
 
-userRouter.route("/").get((req, res) => {
-  // declare a response variable of all users because this is the data we need to access and check
-  let response = USERS;
+userRouter
+  .route("/")
+  .get((req, res) => {
+    // declare a response variable of all users because this is the data we need to access and check
+    let response = USERS;
 
-  // access the request body using object destructuring
-  const { email } = req.body;
+    // access the request body using object destructuring
+    const { email } = req.body;
 
-  // user does not input email
-  if (!email) {
-    logger.info("Request processed successfully!");
-    return res.json(response);
-  }
-  // email address format is wrong
-  if (!isEmail.validate(email)) {
-    logger.error(`Invalid email '${email}' entered.`);
-    return res
-      .status(400)
-      .send("Email must be a valid email address. Please try again.");
-  }
-  // email length is wrong
-  if (email.length < 3 || email.length > 320) {
-    return res.status(400).send("Email must be between 8 and 100 characters.");
-  }
-  // the email entered isn't found
-  if (USERS.filter((user) => user.email == email).length === 0) {
-    logger.error(`Email '${email}' not  found.`);
-    return res.status(400).send("Email not found. Please try again.");
-  } else {
-    // email passes validation
-    logger.info("Request processed successfully!");
-    response = USERS.filter((user) => user.email == email);
-    return res.json(response);
-  }
-});
+    // user does not input email
+    if (!email) {
+      logger.info("Request processed successfully!");
+      return res.json(response);
+    }
+    // email address format is wrong
+    if (!isEmail.validate(email)) {
+      logger.error(`Invalid email '${email}' entered.`);
+      return res
+        .status(400)
+        .send("Email must be a valid email address. Please try again.");
+    }
+    // email length is wrong
+    if (email.length < 3 || email.length > 320) {
+      return res
+        .status(400)
+        .send("Email must be between 8 and 100 characters.");
+    }
+    // the email entered isn't found
+    if (USERS.filter((user) => user.email == email).length === 0) {
+      logger.error(`Email '${email}' not  found.`);
+      return res.status(400).send("Email not found. Please try again.");
+    } else {
+      // email passes validation
+      logger.info("Request processed successfully!");
+      response = USERS.filter((user) => user.email == email);
+      return res.json(response);
+    }
+  })
+  // post a single user to the list of users on the server
+  .post((req, res) => {
+    // use object destructuring for the request body
+    const { name, email, password } = req.body;
+
+    // validate if any field in the object is empty
+    for (const query of ["name", "email", "password"]) {
+      if (!req.body[query]) {
+        logger.error(`The field '${query}' is required.`);
+        return res
+          .status(400)
+          .send(`The field '${query}' is required. Please try again.`);
+      }
+    }
+
+    // validate if the field is not a string
+    for (const query of ["name", "email", "password"]) {
+      if (typeof req.body[query] !== "string") {
+        logger.error(`The field '${query}' must be a string.`);
+        return res
+          .status(400)
+          .send(
+            `The field '${query}' is incorrectly formatted. Please try again.`
+          );
+      }
+    }
+
+    // email address format is wrong
+    if (!isEmail.validate(email)) {
+      logger.error(`Invalid email '${email}' entered.`);
+      return res
+        .status(400)
+        .send("Email must be a valid email address. Please try again.");
+    }
+
+    // if password format is wrong
+    if (!schema.validate(password)) {
+      logger.error(
+        `Invalid password '${password}' entered. The following rules failed: ${schema.validate(
+          password,
+          { list: true }
+        )}`
+      );
+      return res
+        .status(400)
+        .send("Password must be a valid password. Please try again.");
+    }
+
+    // validate if the name field is not the correct length
+    if (name.length < 3 || name.length > 50) {
+      return res.status(400).send("Name must be between 3 and 50 characters.");
+    }
+    // validate if the email field is not the correct length
+    if (email.length < 3 || email.length > 320) {
+      return res
+        .status(400)
+        .send("Email must be between 3 and 320 characters.");
+    }
+
+    // create a new object to push to the store based on req body after validation
+    const user = { id: uuid(), name, email, password };
+
+    // push the newly created object to the store
+
+    USERS.push(user);
+
+    logger.info(`New user with id ${user.id} created successfully!`);
+
+    // return the appropriate status code and end()
+    return res.status(200).send("New user created!");
+  });
+
+userRouter.route("/:userId").get((req, res) => {});
 
 module.exports = userRouter;
