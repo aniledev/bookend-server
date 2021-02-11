@@ -20,3 +20,24 @@
 {"message":"Invalid email '6gb.lex.lexp@thesoapmine' entered.","level":"error"}
 {"message":"Email '6gb.lexlexp@thesoapmine.com' not  found.","level":"error"}
 {"message":"Request processed successfully!","level":"info"}
+{"message":"Email 'snasro.nasro.9@0o9.cc' not  found.","level":"error"}
+{"message":"Email 'snasro.nasro.9@0o9.cc' not  found.","level":"error"}
+{"message":"name is required.","level":"error"}
+{"message":"New user with id 98dd71d9-ad83-4e0e-b3c6-ccdbb8f5d689 created successfully!","level":"info"}
+{"message":"New user with id 5dfe1892-fa52-49a1-b559-0712458dc39d created successfully!","level":"info"}
+{"message":"name must be a string.","level":"error"}
+{"message":"New user with id 36071385-1b99-4c5c-8f74-4a0ee47c1f15 created successfully!","level":"info"}
+{"message":"New user with id 3dab5372-be03-4a8e-9b1e-e6dbdcf74365 created successfully!","level":"info"}
+{"message":"42 must be a string.","level":"error"}
+{"message":"New user with id 8fee5e50-c1e7-4cf5-af2b-34cdd82e71a1 created successfully!","level":"info"}
+{"message":"name must be a string.","level":"error"}
+{"message":"New user with id d4a2cf09-71bb-4696-9c69-3258970e4f05 created successfully!","level":"info"}
+{"message":"New user with id 6621b80a-7851-47fc-87e6-79b79ee1bf40 created successfully!","level":"info"}
+{"message":"New user with id 39252349-118c-4512-8abc-99366afbc3a2 created successfully!","level":"info"}
+{"message":"New user with id df94dfdf-9d5a-47a0-a788-0dd5204fb796 created successfully!","level":"info"}
+{"message":"email must be a string.","level":"error"}
+{"message":"name must be a string.","level":"error"}
+{"message":"email must be a string.","level":"error"}
+{"message":"password must be a string.","level":"error"}
+{"message":"The field 'password' is required.","level":"error"}
+{"message":"New user with id 319b095a-d172-47d1-b8b1-978a9252efd2 created successfully!","level":"info"}

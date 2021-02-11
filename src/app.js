@@ -108,22 +108,35 @@ app.post("/api/users", (req, res) => {
   // validate if any field in the object is empty
   for (const query of ["name", "email", "password"]) {
     if (!req.body[query]) {
-      logger.error(`${query} is required.`);
-      return res.status(400).send(`${query} is required. Please try again.`);
+      logger.error(`The field '${query}' is required.`);
+      return res
+        .status(400)
+        .send(`The field '${query}' is required. Please try again.`);
     }
-
-    // create a new object to push to the store based on req body after validation
-    const user = { id: uuid(), name, email, password };
-
-    // push the newly created object to the store
-
-    USERS.push(user);
-
-    logger.info(`New user with id ${user.id} created successfully!`);
-
-    // return the appropriate status code and end()
-    return res.status(200).json(user);
   }
+
+  for (const query of ["name", "email", "password"]) {
+    if (typeof req.body[query] !== "string") {
+      logger.error(`The field '${query}' must be a string.`);
+      return res
+        .status(400)
+        .send(
+          `The field '${query}' is incorrectly formatted and must be a string. Please try again.`
+        );
+    }
+  }
+
+  // create a new object to push to the store based on req body after validation
+  const user = { id: uuid(), name, email, password };
+
+  // push the newly created object to the store
+
+  USERS.push(user);
+
+  logger.info(`New user with id ${user.id} created successfully!`);
+
+  // return the appropriate status code and end()
+  return res.status(200).send("New user created!");
 });
 
 // gets the user info for one specific user
