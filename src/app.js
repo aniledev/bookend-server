@@ -37,7 +37,6 @@ app.use(express.json());
 //ROUTES
 app.use("/api/users", userRouter);
 
-// TEST API
 
 // get dummy data book list from the server
 app.get("/api/results", (req, res) => {
