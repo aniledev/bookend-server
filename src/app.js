@@ -37,7 +37,6 @@ app.use(express.json());
 //ROUTES
 app.use("/api/users", userRouter);
 
-
 // get dummy data book list from the server
 app.get("/api/results", (req, res) => {
   // declare a variable for the response
@@ -76,11 +75,22 @@ app.get("/api/results/:resultId", (req, res) => {
   res.send("This endpoint returns one individual book from server.");
 });
 
-// get personalized list of books for a user
+// get personalized list of books for a specific user
 app.get("/api/users/:userId/books", (req, res) => {
-  res.send(
-    "This endpoint returns the user's personalized list from the server."
-  );
+  // access the request object
+  const { userId } = req.params;
+
+  // user the find method to find that user
+  const user = USERS.find((user) => user.id == userId);
+
+  // validate user
+  if (!user) {
+    logger.error(`User with ${userId} not found.`);
+    return res.status(400).send("User not found. Please try again.");
+  }
+
+  logger.info("Request processed successfully!");
+  res.status(200).json(user["list"]);
 });
 
 // posts a new book to the users personalized/saved list
@@ -92,9 +102,20 @@ app.post("/api/users/:userId/books", (req, res) => {
 
 // delete a book from personalized list of books
 app.delete("/api/users/:userId/books/:bookId", (req, res) => {
-  res.send(
-    "This endpoint deletes a book from the user's personalized list on the server."
-  );
+  // access requst params
+  const { userId, bookId } = req.params;
+
+  // find the user with specific id
+  const user = USERS.find((user) => user.id == userId);
+  const bookList = user["list"]["books"];
+
+  const index = bookList.findIndex((book) => book.id == bookId);
+
+  // use splice method to remove 1 from array at index
+  bookList.splice(index, 1);
+  logger.info(`Book with id ${bookId} has been deleted.`);
+
+  res.status(204).end();
 });
 
 // post a single user to the list of users on the server

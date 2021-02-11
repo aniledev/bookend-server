@@ -2,3 +2,14 @@
 {"message":"Invalid query input for title: so. Character length not satisfied.","level":"error"}
 {"message":"Request successfully processed.","level":"info"}
 {"message":"Request successfully processed.","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"User with 01e57289-a6c2-49f2-b7b5-fc6f9343e157 not found.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Book with id 3 has been deleted.","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
