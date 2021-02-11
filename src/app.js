@@ -176,9 +176,6 @@ app.post("/api/users", (req, res) => {
 
 // gets the user info for one specific user
 app.get("/api/users/:userId", (req, res) => {
-  // declare a response variable of all users because this is the data we need to access and check
-  let response = USERS;
-
   // access the request object using object destructuring
   const { userId } = req.params;
 
@@ -191,9 +188,7 @@ app.get("/api/users/:userId", (req, res) => {
     return res.status(400).send("User not found. Please try again.");
   }
 
-  response = USERS.filter((user) => user.id === userId);
-
-  res.send(response);
+  res.status(200).send(user);
 });
 
 // deletes the info from the server for one specific user. deleting an account
