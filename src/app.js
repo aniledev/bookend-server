@@ -135,7 +135,18 @@ app.post("/api/users", (req, res) => {
       .send("Email must be a valid email address. Please try again.");
   }
 
-  // validate if the field is not the correct length
+  // validate if the name field is not the correct length
+  if (name.length < 3 || name.length > 50) {
+    return res.status(400).send("Name must be between 3 and 50 characters.");
+  }
+  // validate if the email field is not the correct length
+  if (email.length < 3 || email.length > 320) {
+    return res.status(400).send("Email must be between 3 and 320 characters.");
+  }
+  // validate if the password  field is not the correct length
+  if (password.length < 8) {
+    return res.status(400).send("Password must be greater than 8 characters.");
+  }
 
   // create a new object to push to the store based on req body after validation
   const user = { id: uuid(), name, email, password };
