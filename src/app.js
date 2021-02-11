@@ -121,7 +121,12 @@ app.get("/api/users/:userId", (req, res) => {
 
 // deletes the info from the server for one specific user. deleting an account
 app.delete("/api/users/:userId", (req, res) => {
-  //
+  // destructure the req object to get the id of the user we want to delete
+  // use the find index method to find the index of the user in the array that we want to delete
+
+  // validate here
+
+  // use the splice method to remove 1 from the array at the index nnumber, end()
   res.send(
     "This endpoint deletes a specific user info from the server for a single user."
   );
