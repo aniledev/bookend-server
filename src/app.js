@@ -76,7 +76,7 @@ app.get("/api/users", (req, res) => {
   } else {
     response = USERS.filter((user) => user.email == email);
 
-    res.send(response);
+    res.json(response);
   }
 });
 
@@ -111,7 +111,7 @@ app.get("/api/users/:userId", (req, res) => {
   // declare a response variable of all users because this is the data we need to access and check
   let response = USERS;
 
-  // access the request body using object destructuring
+  // access the request params using object destructuring
   const { userId } = req.params;
 
   response = USERS.filter((user) => user.id == userId);
@@ -121,6 +121,7 @@ app.get("/api/users/:userId", (req, res) => {
 
 // deletes the info from the server for one specific user. deleting an account
 app.delete("/api/users/:userId", (req, res) => {
+  //
   res.send(
     "This endpoint deletes a specific user info from the server for a single user."
   );
