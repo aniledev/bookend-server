@@ -115,6 +115,7 @@ app.post("/api/users", (req, res) => {
     }
   }
 
+  // validate if the field is not a string
   for (const query of ["name", "email", "password"]) {
     if (typeof req.body[query] !== "string") {
       logger.error(`The field '${query}' must be a string.`);
@@ -125,6 +126,16 @@ app.post("/api/users", (req, res) => {
         );
     }
   }
+
+  // email address format is wrong
+  if (!isEmail.validate(email)) {
+    logger.error(`Invalid email '${email}' entered.`);
+    return res
+      .status(400)
+      .send("Email must be a valid email address. Please try again.");
+  }
+
+  // validate if the field is not the correct length
 
   // create a new object to push to the store based on req body after validation
   const user = { id: uuid(), name, email, password };
