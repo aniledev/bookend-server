@@ -8,6 +8,7 @@ const winston = require("winston");
 const { NODE_ENV, PORT, CLIENT_ORIGIN } = require("./config");
 const errorHandler = require("./errorHandler");
 const userRouter = require("./userRouter");
+const resultRouter = require("./resultRouter");
 const logger = require("./logger");
 const uuid = require("uuid").v4;
 const BOOKS = require("./codeDummyData");
@@ -36,8 +37,10 @@ app.use(express.json());
 
 //ROUTES
 app.use("/api/users", userRouter);
+app.use("/api/results", resultRouter);
 
 // get dummy data book list from the server
+/*
 app.get("/api/results", (req, res) => {
   // declare a variable for the response
   let response = BOOKS;
@@ -69,6 +72,7 @@ app.get("/api/results", (req, res) => {
   logger.info("Request successfully processed.");
   res.status(200).send(response);
 });
+*/
 
 // get one individual book result from the server
 app.get("/api/results/:resultId", (req, res) => {
