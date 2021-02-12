@@ -1,23 +1,9 @@
 // IMPORT REQUIRED LIBRARIES AND SECURITY PACKAGES
 require("dotenv").config();
 const express = require("express");
-const path = require("path");
-const morgan = require("morgan");
-const helmet = require("helmet");
-const cors = require("cors");
-const winston = require("winston");
-const { NODE_ENV, PORT, CLIENT_ORIGIN } = require("./config");
-const errorHandler = require("./errorHandler");
-const logger = require("./logger");
-const uuid = require("uuid").v4;
-const BOOKS = require("./codeDummyData");
-const DATA = require("./dummyStore");
-const USERS = require("./userStore");
-const isEmail = require("email-validator");
-const passwordValidator = require("password-validator");
-const schema = new passwordValidator();
 const resultRouter = express.Router();
-schema.is().min(8).has().uppercase(1).has().lowercase(1).has().digits(1);
+const logger = require("./logger");
+const BOOKS = require("./codeDummyData");
 
 resultRouter
   .route("/")
