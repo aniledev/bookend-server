@@ -27,6 +27,7 @@
     "password-validator": "^5.1.1",
     "pg": "^8.5.1",
     "postgrator-cli": "^4.0.0",
+    "url-validator": "^2.0.3",
     "uuidv4": "^6.2.6",
     "winston": "^3.3.3",
     "xss": "^1.0.8"

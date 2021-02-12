@@ -9,6 +9,7 @@ const isEmail = require("email-validator");
 const passwordValidator = require("password-validator");
 const schema = new passwordValidator();
 schema.is().min(8).has().uppercase(1).has().lowercase(1).has().digits(1);
+const isURL = require("url-validator");
 
 userRouter
   .route("/")
@@ -205,6 +206,14 @@ userRouter
     }
 
     // VALIDATE THAT THE THUMBNAIL IS AN IMAGE URL
+    if (!isURL(thumbnailUrl)) {
+      logger.error(`The field '${thumbnailUrl}' must be a valid URL.`);
+      return res
+        .status(400)
+        .send(
+          `The field '${thumbnailUrl}' is incorrectly formatted. Please try again.`
+        );
+    }
 
     // FIND THE USER WITH SPECIFIC ID AND FIND INDEX OF SPECIFIC BOOK WITH BOOKID
     const user = USERS.find((user) => user.id == userId);

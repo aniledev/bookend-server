@@ -12,3 +12,15 @@
 {"message":"Request processed successfully!","level":"info"}
 {"message":"Request processed successfully!","level":"info"}
 {"message":"Request processed successfully!","level":"info"}
+{"message":"User with 62f42eec-0f4c-49ed-aa23-80e6610c811e not found.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"User with dae917b4-8d4f-49e0-8a57-dc151f1b2431 not found.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"The field 'title' is required.","level":"error"}
+{"message":"The field 'https://ravo' must be a valid URL.","level":"error"}
+{"message":"New book with id 42ea61b2-3cd9-48bb-82e5-1669dad207ff created successfully!","level":"info"}
