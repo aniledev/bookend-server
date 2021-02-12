@@ -164,4 +164,27 @@ userRouter
     res.status(204).end();
   });
 
+userRouter
+  .route("/:userId/books")
+  // get personalized list of books for a specific user
+  .get((req, res) => {
+    // access the request object
+    const { userId } = req.params;
+
+    // user the find method to find that user
+    const user = USERS.find((user) => user.id == userId);
+
+    // validate user
+    if (!user) {
+      logger.error(`User with ${userId} not found.`);
+      return res.status(400).send("User not found. Please try again.");
+    }
+
+    logger.info("Request processed successfully!");
+    res.status(200).json(user["list"]);
+  })
+  .post();
+
+userRouter.route("/:userId/books/:bookId").get().delete();
+
 module.exports = userRouter;

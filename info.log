@@ -18,3 +18,14 @@
 {"message":"User with id 6a9f235f-93e7-4cee-871c-2b543279295d has been deleted.","level":"info"}
 {"message":"User with 6a9f235f-93e7-4cee-871c-2b543279295d not found.","level":"error"}
 {"message":"Request processed successfully!","level":"info"}
+{"message":"User with a65664a4-ea32-4d28-a7ad-f7d844ea685f not found.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"User with undefined not found.","level":"error"}
+{"message":"User with undefined not found.","level":"error"}
+{"message":"User with undefined not found.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"User with undefined not found.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"User with undefined not found.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}

@@ -9,6 +9,7 @@ const { NODE_ENV, PORT, CLIENT_ORIGIN } = require("./config");
 const errorHandler = require("./errorHandler");
 const userRouter = require("./userRouter");
 const resultRouter = require("./resultRouter");
+const bookRouter = require("./bookRouter");
 const logger = require("./logger");
 const uuid = require("uuid").v4;
 const BOOKS = require("./codeDummyData");
@@ -39,6 +40,8 @@ app.use(express.json());
 app.use("/api/users", userRouter);
 app.use("/api/results", resultRouter);
 
+
+/*
 // get personalized list of books for a specific user
 app.get("/api/users/:userId/books", (req, res) => {
   // access the request object
@@ -56,6 +59,7 @@ app.get("/api/users/:userId/books", (req, res) => {
   logger.info("Request processed successfully!");
   res.status(200).json(user["list"]);
 });
+*/
 
 // get one individual book from a users lists
 app.get("/api/users/:userId/books/:bookId", (req, res) => {
@@ -193,27 +197,6 @@ app.delete("/api/users/:userId/books/:bookId", (req, res) => {
 
   res.status(204).end();
 });
-
-/*
-// deletes the info from the server for one specific user. deleting an account
-app.delete("/api/users/:userId", (req, res) => {
-  // destructure the req object to get the id of the user we want to delete
-  const { userId } = req.params;
-
-  // use the find index method to find the index of the user in the array that we want to delete
-  const index = USERS.findIndex((user) => user.id === userId);
-  // validate here
-  if (index === -1) {
-    logger.error(`User with id ${userId} not found.`);
-    return res.status(400).send("User not found. Please try again.");
-  }
-
-  // use the splice method to remove 1 from the array at the index number, end()
-  USERS.splice(index, 1);
-  logger.info(`User with id ${userId} has been deleted.`);
-  res.status(204).end();
-});
-*/
 
 // test api endpoint
 app.get("/api", (req, res) => {
