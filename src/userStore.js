@@ -2,7 +2,7 @@ const uuid = require("uuid").v4;
 
 const USERS = [
   {
-    id: uuid(),
+    id: 1,
     name: "Elina",
     email: "elinamcgill@gmail.com",
     password: "Manifesting2021!",
