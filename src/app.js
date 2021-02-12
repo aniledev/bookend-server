@@ -9,7 +9,6 @@ const { NODE_ENV, PORT, CLIENT_ORIGIN } = require("./config");
 const errorHandler = require("./errorHandler");
 const userRouter = require("./userRouter");
 const resultRouter = require("./resultRouter");
-const bookRouter = require("./bookRouter");
 const logger = require("./logger");
 const uuid = require("uuid").v4;
 const BOOKS = require("./codeDummyData");
@@ -39,27 +38,6 @@ app.use(express.json());
 //ROUTES
 app.use("/api/users", userRouter);
 app.use("/api/results", resultRouter);
-
-
-/*
-// get personalized list of books for a specific user
-app.get("/api/users/:userId/books", (req, res) => {
-  // access the request object
-  const { userId } = req.params;
-
-  // user the find method to find that user
-  const user = USERS.find((user) => user.id == userId);
-
-  // validate user
-  if (!user) {
-    logger.error(`User with ${userId} not found.`);
-    return res.status(400).send("User not found. Please try again.");
-  }
-
-  logger.info("Request processed successfully!");
-  res.status(200).json(user["list"]);
-});
-*/
 
 // get one individual book from a users lists
 app.get("/api/users/:userId/books/:bookId", (req, res) => {

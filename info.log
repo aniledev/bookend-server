@@ -29,3 +29,25 @@
 {"message":"User with undefined not found.","level":"error"}
 {"message":"Request processed successfully!","level":"info"}
 {"message":"Request processed successfully!","level":"info"}
+{"message":"Email 'lovelyenm99@yahoo.com' not  found.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"The field 'thumbnailUrl' is required.","level":"error"}
+{"message":"The field 'thumbnailUrl' is required.","level":"error"}
+{"message":"New book with id c1d7240d-bbb8-4626-bb90-6330e7551ffe created successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"New book with id 599133a2-3855-4053-abd9-4b39a4e3480b created successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"User with a267715a-8cce-4bc6-bedd-6a22da9ac456 not found.","level":"error"}
+{"message":"User with a267715a-8cce-4bc6-bedd-6a22da9ac456 not found.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"New book with id 489a69d4-42f4-4be6-afa9-07ef68c6e11b created successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"New book with id 56c37cdc-1e70-4212-9a40-b5ef1b9eb8e6 created successfully!","level":"info"}
+{"message":"The field 'name' is required.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"New book with id 9390c0be-1d76-4924-aa4a-ab13db68b8b8 created successfully!","level":"info"}
+{"message":"The field 'authors' must be a array.","level":"error"}

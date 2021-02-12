@@ -183,7 +183,83 @@ userRouter
     logger.info("Request processed successfully!");
     res.status(200).json(user["list"]);
   })
-  .post();
+  .post((req, res) => {
+    const { userId } = req.params;
+    const {
+      title,
+      isbn,
+      pageCount,
+      publishedDate,
+      thumbnailUrl,
+      shortDescription,
+      longDescription,
+      status,
+      authors,
+      categories,
+    } = req.body;
+
+    // validate if any field in the object is empty
+    for (const query of [
+      "title",
+      "authors",
+      "shortDescription",
+      "categories",
+      "thumbnailUrl",
+    ]) {
+      if (!req.body[query]) {
+        logger.error(`The field '${query}' is required.`);
+        return res
+          .status(400)
+          .send(`The field '${query}' is required. Please try again.`);
+      }
+    }
+
+    // validate if the field is not a string
+    for (const query of ["authors", "categories"]) {
+      if (!Array.isArray(req.body[query])) {
+        logger.error(`The field '${query}' must be a array.`);
+        return res
+          .status(400)
+          .send(
+            `The field '${query}' is incorrectly formatted. Please try again.`
+          );
+      }
+    }
+
+    // find the user with specific id and find index of specific book with bookId
+    const user = USERS.find((user) => user.id == userId);
+    // validate if no user with that id is found
+    if (!user) {
+      logger.error(`User with ${userId} not found.`);
+      return res.status(400).send("User not found. Please try again.");
+    }
+
+    const bookList = user["list"]["books"];
+    if (bookList == undefined) {
+      logger.error(`Book list for user ${userId} not found/undefined.`);
+      return res.status(400).send("Book not found. Please try again.");
+    }
+
+    const book = {
+      id: uuid(),
+      title,
+      isbn: "",
+      pageCount: "",
+      publishedDate: "",
+      thumbnailUrl,
+      shortDescription,
+      longDescription: "",
+      status: "",
+      authors: authors,
+      categories,
+    };
+
+    bookList.push(book);
+
+    logger.info(`New book with id ${book.id} created successfully!`);
+
+    return res.status(200).send("New book created!");
+  });
 
 userRouter.route("/:userId/books/:bookId").get().delete();
 
