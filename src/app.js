@@ -1,25 +1,14 @@
-// IMPORT REQUIRED LIBRARIES AND SECURITY PACKAGES
+// IMPORT REQUIRED LIBRARIES AND SECURITY & LOGGING PACKAGES
 require("dotenv").config();
 const express = require("express");
+const app = express();
 const morgan = require("morgan");
 const helmet = require("helmet");
 const cors = require("cors");
-const winston = require("winston");
-const { NODE_ENV, PORT, CLIENT_ORIGIN } = require("./config");
-const errorHandler = require("./errorHandler");
+const { NODE_ENV, CLIENT_ORIGIN } = require("./config");
 const userRouter = require("./userRouter");
 const resultRouter = require("./resultRouter");
-const logger = require("./logger");
-const uuid = require("uuid").v4;
-const BOOKS = require("./codeDummyData");
-const USERS = require("./userStore");
-const isEmail = require("email-validator");
-const passwordValidator = require("password-validator");
-const schema = new passwordValidator();
-
-schema.is().min(8).has().uppercase(1).has().lowercase(1).has().digits(1);
-
-const app = express();
+const errorHandler = require("./errorHandler");
 
 const morganOption = NODE_ENV === "production" ? "tiny" : "dev";
 
@@ -39,12 +28,11 @@ app.use(express.json());
 app.use("/api/users", userRouter);
 app.use("/api/results", resultRouter);
 
-// test api endpoint
+// TEST API/EXPRESS WIRING
 app.get("/api", (req, res) => {
   res.json({ ok: true });
 });
 
-// test express app wiring
 app.get("/", (req, res) => {
   res.send("Hello, world!");
 });
