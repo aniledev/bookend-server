@@ -185,7 +185,7 @@ userRouter
     res.status(200).json(user["list"]);
   })
   // posts a new book to the users personalized/saved list
-  .post((req, res) => {
+  .post(bodyParser, (req, res) => {
     const { userId } = req.params;
     const {
       title,
