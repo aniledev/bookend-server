@@ -24,3 +24,16 @@
 {"message":"The field 'title' is required.","level":"error"}
 {"message":"The field 'https://ravo' must be a valid URL.","level":"error"}
 {"message":"New book with id 42ea61b2-3cd9-48bb-82e5-1669dad207ff created successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"The field 'categories' must be a array.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"The field 'categories' must be a array.","level":"error"}
+{"message":"The field 'name' is required.","level":"error"}
+{"message":"The field 'name' is required.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"New book with id e199a486-4298-4b4d-9600-2507a2754374 created successfully!","level":"info"}

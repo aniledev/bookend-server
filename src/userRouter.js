@@ -182,7 +182,6 @@ userRouter
       "title",
       "authors",
       "shortDescription",
-      "categories",
       "thumbnailUrl",
     ]) {
       if (!req.body[query]) {
@@ -194,14 +193,16 @@ userRouter
     }
 
     // VALIDATE IF THE FIELD IS NOT A STRING
-    for (const query of ["authors", "categories"]) {
-      if (!Array.isArray(req.body[query])) {
-        logger.error(`The field '${query}' must be a array.`);
-        return res
-          .status(400)
-          .send(
-            `The field '${query}' is incorrectly formatted. Please try again.`
-          );
+    for (const query of ["authors"]) {
+      if (query) {
+        if (!Array.isArray(req.body[query])) {
+          logger.error(`The field '${query}' must be a array.`);
+          return res
+            .status(400)
+            .send(
+              `The field '${query}' is incorrectly formatted. Please try again.`
+            );
+        }
       }
     }
 
@@ -240,7 +241,7 @@ userRouter
       longDescription: "",
       status: "",
       authors: authors,
-      categories,
+      categories: [],
     };
 
     bookList.push(book);
