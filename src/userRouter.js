@@ -227,6 +227,8 @@ userRouter
       }
     }
 
+    // validate that the thumbnail is an image url
+
     // find the user with specific id and find index of specific book with bookId
     const user = USERS.find((user) => user.id == userId);
     // validate if no user with that id is found
