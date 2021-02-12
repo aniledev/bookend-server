@@ -1,4 +1,3 @@
-// IMPORT REQUIRED LIBRARIES AND SECURITY PACKAGES
 require("dotenv").config();
 const express = require("express");
 const userRouter = express.Router();
@@ -14,47 +13,44 @@ schema.is().min(8).has().uppercase(1).has().lowercase(1).has().digits(1);
 userRouter
   .route("/")
   .get((req, res) => {
-    // declare a response variable of all users because this is the data we need to access and check
     let response = USERS;
 
-    // access the request body using object destructuring
     const { email } = req.body;
 
-    // user does not input email
+    // VALIDATE EMAIL INPUT
     if (!email) {
       logger.info("Request processed successfully!");
       return res.json(response);
     }
-    // email address format is wrong
+
     if (!isEmail.validate(email)) {
       logger.error(`Invalid email '${email}' entered.`);
       return res
         .status(400)
         .send("Email must be a valid email address. Please try again.");
     }
-    // email length is wrong
+
     if (email.length < 3 || email.length > 320) {
       return res
         .status(400)
         .send("Email must be between 8 and 100 characters.");
     }
-    // the email entered isn't found
+    // VALIDATE THE EMAIL ENTERED ISN'T FOUND
     if (USERS.filter((user) => user.email == email).length === 0) {
       logger.error(`Email '${email}' not  found.`);
       return res.status(400).send("Email not found. Please try again.");
     } else {
-      // email passes validation
+      // EMAIL PASSES VALIDATION
       logger.info("Request processed successfully!");
       response = USERS.filter((user) => user.email == email);
       return res.json(response);
     }
   })
-  // post a single user to the list of users on the server
+  // POST A SINGLE USER TO THE LIST OF USERS ON THE SERVER
   .post(bodyParser, (req, res) => {
-    // use object destructuring for the request body
     const { name, email, password } = req.body;
 
-    // validate if any field in the object is empty
+    // VALIDATE IF ANY FIELD IN THE OBJECT IS EMPTY
     for (const query of ["name", "email", "password"]) {
       if (!req.body[query]) {
         logger.error(`The field '${query}' is required.`);
@@ -64,7 +60,7 @@ userRouter
       }
     }
 
-    // validate if the field is not a string
+    // VALIDATE IF THE FIELD IS NOT A STRING
     for (const query of ["name", "email", "password"]) {
       if (typeof req.body[query] !== "string") {
         logger.error(`The field '${query}' must be a string.`);
@@ -76,7 +72,7 @@ userRouter
       }
     }
 
-    // email address format is wrong
+    // VALIDATE EMAIL ADDRESS FORMAT
     if (!isEmail.validate(email)) {
       logger.error(`Invalid email '${email}' entered.`);
       return res
@@ -84,7 +80,7 @@ userRouter
         .send("Email must be a valid email address. Please try again.");
     }
 
-    // if password format is wrong
+    // VALIDATE PASSWORD FORMAT
     if (!schema.validate(password)) {
       logger.error(
         `Invalid password '${password}' entered. The following rules failed: ${schema.validate(
@@ -97,61 +93,51 @@ userRouter
         .send("Password must be a valid password. Please try again.");
     }
 
-    // validate if the name field is not the correct length
+    // VALIDATE FIELD LENGTHS
     if (name.length < 3 || name.length > 50) {
       return res.status(400).send("Name must be between 3 and 50 characters.");
     }
-    // validate if the email field is not the correct length
     if (email.length < 3 || email.length > 320) {
       return res
         .status(400)
         .send("Email must be between 3 and 320 characters.");
     }
 
-    // create a new object to push to the store based on req body after validation
+    // CREATE A NEW OBJECT TO PUSH TO THE STORE BASED ON REQ BODY AFTER VALIDATION
     const user = { id: uuid(), name, email, password };
-
-    // push the newly created object to the store
-
     USERS.push(user);
-
     logger.info(`New user with id ${user.id} created successfully!`);
 
-    // return the appropriate status code and end()
     return res.status(200).send("New user created!");
   });
 
 userRouter
   .route("/:userId")
-  // gets the user info for one specific user
+  // GETS THE USER INFO FOR ONE SPECIFIC USER
   .get((req, res) => {
-    // access the request object using object destructuring
     const { userId } = req.params;
 
-    // use the find method to find user with a specific id
     const user = USERS.find((user) => user.id == userId);
 
-    // validate if no user with that id is found
+    // VALIDATE IF NO USER WITH THAT ID IS FOUND
     if (!user) {
       logger.error(`User with ${userId} not found.`);
       return res.status(400).send("User not found. Please try again.");
     }
     res.status(200).json(user);
   })
-  // deletes the info from the server for one specific user. deleting an account
+  // DELETES THE INFO FROM THE SERVER FOR ONE SPECIFIC USER
   .delete((req, res) => {
-    // destructure the req object to get the id of the user we want to delete
     const { userId } = req.params;
 
-    // use the find index method to find the index of the user in the array that we want to delete
     const index = USERS.findIndex((user) => user.id === userId);
-    // validate here
+
+    // INDEX === -1 MEANS ITEM IS NOT IN ARRAY/ NOT FOUND
     if (index === -1) {
       logger.error(`User with id ${userId} not found.`);
       return res.status(400).send("User not found. Please try again.");
     }
 
-    // use the splice method to remove 1 from the array at the index number, end()
     USERS.splice(index, 1);
     logger.info(`User with id ${userId} has been deleted.`);
     res.status(204).end();
@@ -159,15 +145,13 @@ userRouter
 
 userRouter
   .route("/:userId/books")
-  // get personalized list of books for a specific user
+  // GET PERSONALIZED LIST OF BOOKS FOR A SPECIFIC USER
   .get((req, res) => {
-    // access the request object
     const { userId } = req.params;
 
-    // user the find method to find that user
     const user = USERS.find((user) => user.id == userId);
 
-    // validate user
+    // VALIDATE IF USERID IS NOT FOUND
     if (!user) {
       logger.error(`User with ${userId} not found.`);
       return res.status(400).send("User not found. Please try again.");
@@ -176,7 +160,7 @@ userRouter
     logger.info("Request processed successfully!");
     res.status(200).json(user["list"]);
   })
-  // posts a new book to the users personalized/saved list
+  // POSTS A NEW BOOK TO THE USERS PERSONALIZED/SAVED LIST
   .post(bodyParser, (req, res) => {
     const { userId } = req.params;
     const {
@@ -192,7 +176,7 @@ userRouter
       categories,
     } = req.body;
 
-    // validate if any field in the object is empty
+    // VALIDATE IF ANY FIELD IN THE OBJECT IS EMPTY
     for (const query of [
       "title",
       "authors",
@@ -208,7 +192,7 @@ userRouter
       }
     }
 
-    // validate if the field is not a string
+    // VALIDATE IF THE FIELD IS NOT A STRING
     for (const query of ["authors", "categories"]) {
       if (!Array.isArray(req.body[query])) {
         logger.error(`The field '${query}' must be a array.`);
@@ -220,11 +204,11 @@ userRouter
       }
     }
 
-    // validate that the thumbnail is an image url
+    // VALIDATE THAT THE THUMBNAIL IS AN IMAGE URL
 
-    // find the user with specific id and find index of specific book with bookId
+    // FIND THE USER WITH SPECIFIC ID AND FIND INDEX OF SPECIFIC BOOK WITH BOOKID
     const user = USERS.find((user) => user.id == userId);
-    // validate if no user with that id is found
+
     if (!user) {
       logger.error(`User with ${userId} not found.`);
       return res.status(400).send("User not found. Please try again.");
@@ -259,14 +243,14 @@ userRouter
 
 userRouter
   .route("/:userId/books/:bookId")
-  // get one individual book from a users lists
+  // GET ONE INDIVIDUAL BOOK FROM A USERS LISTS
   .get((req, res) => {
     // access request params
     const { userId, bookId } = req.params;
 
-    // find the user with specific id and find index of specific book with bookId
+    // FIND THE USER WITH SPECIFIC ID AND FIND INDEX OF SPECIFIC BOOK WITH BOOKID
     const user = USERS.find((user) => user.id == userId);
-    // validate user
+
     if (!user) {
       logger.error(`User with ${userId} not found.`);
       return res.status(400).send("User not found. Please try again.");
@@ -278,7 +262,7 @@ userRouter
       return res.status(400).send("Book not found. Please try again.");
     }
 
-    // find specific book in the list based on bookId
+    // FIND SPECIFIC BOOK IN THE LIST BASED ON BOOKID
     const book = bookList.find((book) => book.id == bookId);
     if (!book) {
       logger.error(`Book with ${bookId} not found.`);
@@ -286,15 +270,12 @@ userRouter
     }
     res.json(book);
   })
-  // delete a book from personalized list of books
+  // DELETE A BOOK FROM PERSONALIZED LIST OF BOOKS
   .delete((req, res) => {
-    // access request params
     const { userId, bookId } = req.params;
 
-    // find the user with specific id and find index of specific book with bookId
     const user = USERS.find((user) => user.id == userId);
 
-    // validate user
     if (!user) {
       logger.error(`User with ${userId} not found.`);
       return res.status(400).send("User not found. Please try again.");
@@ -303,13 +284,11 @@ userRouter
     const bookList = user["list"]["books"];
     const index = bookList.findIndex((book) => book.id == bookId);
 
-    // validate here
     if (index === -1) {
       logger.error(`Book with id ${bookId} not found.`);
       return res.status(400).send("Book not found. Please try again.");
     }
 
-    // use splice method to remove 1 from array at index
     bookList.splice(index, 1);
     logger.info(`Book with id ${bookId} has been deleted.`);
 
