@@ -1,4 +1,5 @@
 // This is the module that holds the router for the different endpoints.
+/*
 const path = require("path");
 const express = require("express");
 const xss = require("xss");
@@ -10,3 +11,4 @@ const bodyParser = express.json();
 Router.route().get().post();
 
 module.exports = router;
+*/

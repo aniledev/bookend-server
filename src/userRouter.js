@@ -144,7 +144,7 @@ userRouter
       logger.error(`User with ${userId} not found.`);
       return res.status(400).send("User not found. Please try again.");
     }
-    res.status(200).send(user);
+    res.status(200).json(user);
   })
   // deletes the info from the server for one specific user. deleting an account
   .delete((req, res) => {
