@@ -183,6 +183,7 @@ userRouter
     logger.info("Request processed successfully!");
     res.status(200).json(user["list"]);
   })
+  // posts a new book to the users personalized/saved list
   .post((req, res) => {
     const { userId } = req.params;
     const {
@@ -261,6 +262,36 @@ userRouter
     return res.status(200).send("New book created!");
   });
 
-userRouter.route("/:userId/books/:bookId").get().delete();
+userRouter
+  .route("/:userId/books/:bookId")
+  // get one individual book from a users lists
+  .get((req, res) => {
+    // access request params
+    const { userId, bookId } = req.params;
+
+    // find the user with specific id and find index of specific book with bookId
+    const user = USERS.find((user) => user.id == userId);
+    // validate user
+    if (!user) {
+      logger.error(`User with ${userId} not found.`);
+      return res.status(400).send("User not found. Please try again.");
+    }
+
+    const bookList = user["list"]["books"];
+    if (bookList == undefined) {
+      logger.error(`Book list for user ${userId} not found/undefined.`);
+      return res.status(400).send("Book not found. Please try again.");
+    }
+
+    // find specific book in the list based on bookId
+    const book = bookList.find((book) => book.id == bookId);
+    if (!book) {
+      logger.error(`Book with ${bookId} not found.`);
+      return res.status(400).send("Book not found. Please try again.");
+    }
+    res.json(book);
+  })
+  // delete a book from personalized list of books
+  .delete();
 
 module.exports = userRouter;

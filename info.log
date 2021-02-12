@@ -51,3 +51,10 @@
 {"message":"Request processed successfully!","level":"info"}
 {"message":"New book with id 9390c0be-1d76-4924-aa4a-ab13db68b8b8 created successfully!","level":"info"}
 {"message":"The field 'authors' must be a array.","level":"error"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"The field 'authors' must be a array.","level":"error"}
+{"message":"New book with id 8a9e0dcf-85ac-43f2-9d62-1a258a55cf3e created successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
+{"message":"Request processed successfully!","level":"info"}
