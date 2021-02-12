@@ -16,6 +16,7 @@ const isEmail = require("email-validator");
 const passwordValidator = require("password-validator");
 const schema = new passwordValidator();
 const userRouter = express.Router();
+const bodyParser = express.json();
 schema.is().min(8).has().uppercase(1).has().lowercase(1).has().digits(1);
 
 userRouter
@@ -57,7 +58,7 @@ userRouter
     }
   })
   // post a single user to the list of users on the server
-  .post((req, res) => {
+  .post(bodyParser, (req, res) => {
     // use object destructuring for the request body
     const { name, email, password } = req.body;
 

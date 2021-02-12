@@ -51,7 +51,7 @@ resultRouter
     }
 
     logger.info("Request successfully processed.");
-    res.status(200).send(response);
+    res.status(200).json(response);
   });
 
 resultRouter
