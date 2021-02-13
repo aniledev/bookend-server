@@ -181,7 +181,7 @@ userRouter
     for (const query of [
       "title",
       "authors",
-      "shortDescription",
+      "longDescription",
       "thumbnailUrl",
     ]) {
       if (!req.body[query]) {
