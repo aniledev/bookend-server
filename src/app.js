@@ -16,10 +16,9 @@ const morganOption = NODE_ENV === "production" ? "tiny" : "dev";
 app.use(morgan(morganOption));
 app.use(helmet());
 app.use(
-  cors
-  // cors({
-  //   origin: CLIENT_ORIGIN,
-  // })
+  cors({
+    origin: CLIENT_ORIGIN,
+  })
 );
 app.use(express.json());
 
