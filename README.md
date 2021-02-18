@@ -4,7 +4,7 @@ Link to front end client: https://bookend.vercel.app/
 
 ## About the Bookend Server
 
-This server is built using Node.js/Express with the purpose of powering the API for the Book End Client which allows users to receive book recommendations. 
+This server is built using Node.js/Express and deployed with Heroku with the purpose of powering the API for the Book End Client which allows users to receive book recommendations. 
 
 ## Documentation
 
