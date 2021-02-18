@@ -39,7 +39,7 @@ userRouter
     // VALIDATE THE EMAIL ENTERED ISN'T FOUND
     if (USERS.filter((user) => user.email == email).length === 0) {
       logger.error(`Email '${email}' not  found.`);
-      return res.status(400).send("Email not found. Please try again.");
+      return res.status(404).send("Email not found. Please try again.");
     } else {
       // EMAIL PASSES VALIDATION
       logger.info("Request processed successfully!");
@@ -109,7 +109,7 @@ userRouter
     USERS.push(user);
     logger.info(`New user with id ${user.id} created successfully!`);
 
-    return res.status(200).send("New user created!");
+    return res.status(201).send("New user created!");
   });
 
 userRouter
@@ -123,7 +123,7 @@ userRouter
     // VALIDATE IF NO USER WITH THAT ID IS FOUND
     if (!user) {
       logger.error(`User with ${userId} not found.`);
-      return res.status(400).send("User not found. Please try again.");
+      return res.status(404).send("User not found. Please try again.");
     }
     res.status(200).json(user);
   })
@@ -136,7 +136,7 @@ userRouter
     // INDEX === -1 MEANS ITEM IS NOT IN ARRAY/ NOT FOUND
     if (index === -1) {
       logger.error(`User with id ${userId} not found.`);
-      return res.status(400).send("User not found. Please try again.");
+      return res.status(404).send("User not found. Please try again.");
     }
 
     USERS.splice(index, 1);
@@ -155,7 +155,7 @@ userRouter
     // VALIDATE IF USERID IS NOT FOUND
     if (!user) {
       logger.error(`User with ${userId} not found.`);
-      return res.status(400).send("User not found. Please try again.");
+      return res.status(404).send("User not found. Please try again.");
     }
 
     logger.info("Request processed successfully!");
@@ -221,13 +221,13 @@ userRouter
 
     if (!user) {
       logger.error(`User with ${userId} not found.`);
-      return res.status(400).send("User not found. Please try again.");
+      return res.status(404).send("User not found. Please try again.");
     }
 
     const bookList = user["list"]["books"];
     if (bookList == undefined) {
       logger.error(`Book list for user ${userId} not found/undefined.`);
-      return res.status(400).send("Book not found. Please try again.");
+      return res.status(404).send("Book not found. Please try again.");
     }
 
     const book = {
@@ -248,7 +248,7 @@ userRouter
 
     logger.info(`New book with id ${book.id} created successfully!`);
 
-    return res.status(200).send("New book created!");
+    return res.status(201).send("New book created!");
   });
 
 userRouter
@@ -263,20 +263,20 @@ userRouter
 
     if (!user) {
       logger.error(`User with ${userId} not found.`);
-      return res.status(400).send("User not found. Please try again.");
+      return res.status(404).send("User not found. Please try again.");
     }
 
     const bookList = user["list"]["books"];
     if (bookList == undefined) {
       logger.error(`Book list for user ${userId} not found/undefined.`);
-      return res.status(400).send("Book not found. Please try again.");
+      return res.status(404).send("Book not found. Please try again.");
     }
 
     // FIND SPECIFIC BOOK IN THE LIST BASED ON BOOKID
     const book = bookList.find((book) => book.id == bookId);
     if (!book) {
       logger.error(`Book with ${bookId} not found.`);
-      return res.status(400).send("Book not found. Please try again.");
+      return res.status(404).send("Book not found. Please try again.");
     }
     res.json(book);
   })
@@ -288,7 +288,7 @@ userRouter
 
     if (!user) {
       logger.error(`User with ${userId} not found.`);
-      return res.status(400).send("User not found. Please try again.");
+      return res.status(404).send("User not found. Please try again.");
     }
 
     const bookList = user["list"]["books"];
@@ -296,7 +296,7 @@ userRouter
 
     if (index === -1) {
       logger.error(`Book with id ${bookId} not found.`);
-      return res.status(400).send("Book not found. Please try again.");
+      return res.status(404).send("Book not found. Please try again.");
     }
 
     bookList.splice(index, 1);

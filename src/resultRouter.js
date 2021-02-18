@@ -31,7 +31,7 @@ resultRouter
     // VALIDATE RESPONSE
     if (response.length < 1 || response == undefined) {
       logger.error(`Invalid query for ${title}. No matches found.`);
-      return res.status(200).send("No matches found. Please try again.");
+      return res.status(404).send("No matches found. Please try again.");
     }
 
     logger.info("Request successfully processed.");
@@ -48,7 +48,7 @@ resultRouter
     // VALIDATE IF NO PARAMS MATCH
     if (!book) {
       logger.error(`User with ${userId} not found.`);
-      return res.status(400).send("User not found. Please try again.");
+      return res.status(404).send("User not found. Please try again.");
     }
 
     logger.info("Result processed successfully.");
