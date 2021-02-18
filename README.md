@@ -1,26 +1,45 @@
-# Express Boilerplate!
+# Bookend Server 
 
-This is a boilerplate project used for starting new projects!
+Link to front end client: https://bookend.vercel.app/
 
-## Set up
+## About the Shelf Life Server
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+This server is built using Node.js/Express with the purpose of powering the API for the Book End Client which allows users to receive book recommendations. 
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+## Documentation
 
-## Scripts
+### Endpoints
 
-Start the application `npm start`
+#### User Endpoints
 
-Start nodemon for the application `npm run dev`
+- GET PERSONALIZED LIST OF BOOKS
+`GET api/user/:userId/books`
 
-Run the tests `npm test`
+- POSTS A NEW BOOK TO THE USERS PERSONALIZED/SAVED LIST
+`POST api/user/:userId/books`
 
-## Deploying
+- GET ONE INDIVIDUAL BOOK FROM A USERS LISTS
+`GET api/user/:userId/books/:bookId`
 
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's main branch.
+- DELETE A BOOK FROM PERSONALIZED LIST OF BOOKS
+`DELETE api/user/:userId/books/:bookId`
+
+### Status Codes
+
+This API returns the following status codes:
+
+| Status Code | Description             |
+| :---------- | :---------------------- |
+| 200         | `OK`                    |
+| 201         | `CREATED`               |
+| 204         | `NO CONTENT`               |
+| 400         | `BAD REQUEST`           |
+| 404         | `NOT FOUND`             |
+| 500         | `INTERNAL SERVER ERROR` |
+
+
+#### To install locally
+
+- Clone the github repo to your machine.
+- Run 'npm install' in git
+- Run 'npm start'
